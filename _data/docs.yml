@@ -9,3 +9,11 @@
     - buildbot
     - website
     - C4
+
+- title: Howto
+  docs:
+    - first-contribution-about
+    - first-contribution-git
+    - first-contribution-commits
+    - first-contribution-rebase-and-push
+    - first-contribution-pull-request

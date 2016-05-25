@@ -1,0 +1,98 @@
+.TH ESTOP_LATCH "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+estop_latch \- ESTOP latch
+.SH SYNOPSIS
+.HP
+.HP
+estop_latch
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt estop_latch 
+.LP
+.B newinst estop_latch <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+sets ok-out true and fault-out false"; only if ok-in is true, 
+fault-in is false and a rising edge is seen on reset.  
+
+While ok-out is true, watchdog toggles, and can be used for chargepumps or similar needs.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBestop_latch.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B estop_latch.N.ok_in \fR bit in \fR
+( OR
+.B <newinstname>.ok_in \fR bit in \fR )
+
+.TP
+.B estop_latch.N.fault_in \fR bit in \fR
+( OR
+.B <newinstname>.fault_in \fR bit in \fR )
+
+.TP
+.B estop_latch.N.reset \fR bit in \fR
+( OR
+.B <newinstname>.reset \fR bit in \fR )
+
+.TP
+.B estop_latch.N.ok_out \fR bit out \fR
+( OR
+.B <newinstname>.ok_out \fR bit out \fR )
+
+.TP
+.B estop_latch.N.fault_out \fR bit out \fR
+( OR
+.B <newinstname>.fault_out \fR bit out \fR )
+
+.TP
+.B estop_latch.N.watchdog \fR bit out \fR
+( OR
+.B <newinstname>.watchdog \fR bit out \fR )
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

@@ -1,0 +1,77 @@
+.TH MESA_PKTGYRO_TEST "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+mesa_pktgyro_test \- PktUART simple test with Microstrain 3DM-GX3-15 gyro
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt mesa_pktgyro_test [count=\fIN\fB|names=\fIname1\fB[,\fIname2...\fB]]
+.SH DESCRIPTION
+.HP
+.HP
+
+This component is written in order to test
+the PktUART driver for Mesa. It resembles partly Andy Pugh's mesa_uart.comp .
+
+This module uses the names= mode of loadrt declaration to specifiy which PktUART
+instances to enable. A check is included to ensure that the count= option is
+not used instead.
+
+For simplicity we test only one PktUART instance, therefore load the component
+like this:
+
+*loadrt mesa_uart names=hm2_5i25.0.pktuart.0*
+
+The PktUART instance names are printed to the dmesg buffer during the Hostmot2
+setup sequence, one for each PktUART instance included in the bitfile loaded to
+each installed card during the Hostmot2 setup sequence. Type "dmesg" at the
+terminal prompt to view the output.
+If you want to work with more than one PktUART instance, consult Andy Pugh's
+mesa_uart.comp
+
+The component exports only one function, namely receive, which needs to be added
+to a realtime thread.
+
+To test this component  set DEBUG=5 before and execute this HAL script:
+
+    loadrt hostmot2
+    loadrt hm2_pci
+    loadrt mesa_pktgyro_test names=hm2_5i25.0.pktuart.0
+    loadrt threads name1=test1 period1=10000000
+    addf hm2_5i25.0.pktuart.0.receive test1
+    start
+
+Check linuxcnc.log for debug output.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBmesa-pktgyro-test.\fIN\fB.receive\fR (requires a floating-point thread)
+
+.SH PINS
+.HP
+.HP
+.TP
+.B mesa-pktgyro-test.\fIN\fB.rxbytes\fR s32 out \fR
+Number of Bytes received or negative Error code
+.HP
+.SH AUTHOR
+.HP
+.HP
+Boris Skegin
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

@@ -1,0 +1,118 @@
+.TH WCOMPN "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+wcompn \- N-range window comparator
+.SH SYNOPSIS
+.HP
+.HP
+wcompn
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt wcompn 
+.LP
+.B newinst wcompn <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBwcompn.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B wcompn.N.in \fR float in \fR
+( OR
+.B <newinstname>.in \fR float in \fR )
+
+.HP
+Value being compared
+.TP
+.B wcompn.N.value# \fR float in  (M=0..pincount) \fR
+( OR
+.B <newinstname>.value# \fR float in  (M=0..pincount) \fR )
+
+.HP
+Boundary N for comparison
+.TP
+.B wcompn.N.default_out \fR s32 in \fR(default: \fI-1\fR)
+( OR
+.B <newinstname>.default_out \fR s32 in \fR(default: \fI-1\fR) )
+
+.HP
+Default output value when input is not in range
+.TP
+.B wcompn.N.out \fR s32 out \fR
+( OR
+.B <newinstname>.out \fR s32 out \fR )
+
+.HP
+Returns the index of the window the *in* is currently in
+.TP
+.B wcompn.N.under \fR bit out \fR
+( OR
+.B <newinstname>.under \fR bit out \fR )
+
+.HP
+True if *in* is less than *value0*
+.TP
+.B wcompn.N.over \fR bit out \fR
+( OR
+.B <newinstname>.over \fR bit out \fR )
+
+.HP
+True if *in* is greater than or equal to *value<N-1>*
+.TP
+.B wcompn.N.in_range \fR bit out \fR
+( OR
+.B <newinstname>.in_range \fR bit out \fR )
+
+.HP
+True if *in* is strictly between *value0* and *value<N-1>*
+.SH INST_PARAMETERS
+.HP
+.HP
+.TP
+.B pincount\fR int \fR(default: \fI2\fR)
+.SH NOTES
+.HP
+.HP
+If *max* <= *min* or *value<x>* are not in ascending order then the behavior is undefined.
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

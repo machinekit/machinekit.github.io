@@ -1,0 +1,91 @@
+.TH STATS "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+stats \- compute mean and variance of a value
+.SH SYNOPSIS
+.HP
+.HP
+stats
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt stats 
+.LP
+.B newinst stats <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBstats.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B stats.N.in \fR float in \fR
+( OR
+.B <newinstname>.in \fR float in \fR )
+
+.TP
+.B stats.N.enable \fR bit in \fR
+( OR
+.B <newinstname>.enable \fR bit in \fR )
+
+.TP
+.B stats.N.mean \fR float out \fR
+( OR
+.B <newinstname>.mean \fR float out \fR )
+
+.TP
+.B stats.N.variance \fR float out \fR
+( OR
+.B <newinstname>.variance \fR float out \fR )
+
+.TP
+.B stats.N.n \fR u32 out \fR
+( OR
+.B <newinstname>.n \fR u32 out \fR )
+
+.SH SEE ALSO
+.HP
+.HP
+
+http://en.wikipedia.org/wiki/Algorithms_for_calculating_variance#Online_algorithm
+
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

@@ -1,0 +1,149 @@
+.TH MUX16 "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+mux16 \- Select from one of sixteen input values
+.SH SYNOPSIS
+.HP
+.HP
+mux16
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt mux16 
+.LP
+.B newinst mux16 <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+pin in bit use_graycode
+This signifies the input will use Gray code instead of binary.
+Gray code is a good choice when using physical switches because
+for each increment only one select input changes at a time.
+
+pin in bit suppress_no_input
+This suppresses changing the output if all select lines are false.
+This stops unwanted jumps in output between transitions of input.
+but make in00 unavaliable.
+
+pin in float debounce_time
+sets debouce time in seconds.  eg. .10 = a tenth of a second
+input must be stable this long before outputs changes. This
+helps to ignore 'noisy' switches.
+
+pin in bit sel#[4]
+Together, these determine which *inN* value is copied to *out*.
+
+pin out float out_f
+pin out s32 out_s
+Follows the value of one of the *inN* values according to the four *sel* values
+and whether use-graycode is active.
+
+The s32 value will be trunuated and limited to the max and min values of signed values.
+
+    sel3=false, sel2=false, sel1=false, sel0=false
+    out follows in0
+
+    sel3=false, sel2=false, sel1=false, sel0=true
+    out follows in1
+
+etc.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBmux16.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B mux16.N.use_graycode \fR bit in \fR
+( OR
+.B <newinstname>.use_graycode \fR bit in \fR )
+
+.TP
+.B mux16.N.suppress_no_input \fR bit in \fR
+( OR
+.B <newinstname>.suppress_no_input \fR bit in \fR )
+
+.TP
+.B mux16.N.debounce_time \fR float in \fR
+( OR
+.B <newinstname>.debounce_time \fR float in \fR )
+
+.TP
+.B mux16.N.sel# \fR bit in  (M=0..4) \fR
+( OR
+.B <newinstname>.sel# \fR bit in  (M=0..4) \fR )
+
+.TP
+.B mux16.N.out_f \fR float out \fR
+( OR
+.B <newinstname>.out_f \fR float out \fR )
+
+.TP
+.B mux16.N.out_s \fR s32 out \fR
+( OR
+.B <newinstname>.out_s \fR s32 out \fR )
+
+.TP
+.B mux16.N.elapsed \fR float out \fR
+( OR
+.B <newinstname>.elapsed \fR float out \fR )
+
+.HP
+Current value of the internal debounce timer
+ for debugging.
+.TP
+.B mux16.N.selected \fR s32 out \fR
+( OR
+.B <newinstname>.selected \fR s32 out \fR )
+
+.HP
+Current value of the internal selection variable after conversion
+ for debugging
+.TP
+.B mux16.N.in## \fR float in  (MM=00..16) \fR
+( OR
+.B <newinstname>.in## \fR float in  (MM=00..16) \fR )
+
+.HP
+array of selectable outputs
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

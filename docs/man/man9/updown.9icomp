@@ -1,0 +1,118 @@
+.TH UPDOWN "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+updown \- Counts up or down, with optional limits and wraparound behavior
+.SH SYNOPSIS
+.HP
+.HP
+updown
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt updown 
+.LP
+.B newinst updown <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBupdown.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+Process inputs and update count if necessary
+.SH PINS
+.HP
+.HP
+.TP
+.B updown.N.countup \fR bit in \fR
+( OR
+.B <newinstname>.countup \fR bit in \fR )
+
+.HP
+Increment count when this pin goes from 0 to 1
+.TP
+.B updown.N.countdown \fR bit in \fR
+( OR
+.B <newinstname>.countdown \fR bit in \fR )
+
+.HP
+Decrement count when this pin goes from 0 to 1
+.TP
+.B updown.N.reset \fR bit in \fR
+( OR
+.B <newinstname>.reset \fR bit in \fR )
+
+.HP
+Reset count when this pin goes from 0 to 1
+.TP
+.B updown.N.count \fR s32 out \fR
+( OR
+.B <newinstname>.count \fR s32 out \fR )
+
+.HP
+The current count
+.TP
+.B updown.N.clamp \fR bit io \fR
+( OR
+.B <newinstname>.clamp \fR bit io \fR )
+
+.HP
+If true, then clamp the output to the min and max parameters.
+.TP
+.B updown.N.wrap \fR bit io \fR
+( OR
+.B <newinstname>.wrap \fR bit io \fR )
+
+.HP
+
+If true, then wrap around when the count goes above or below the min and max parameters.  
+Note that wrap implies (and overrides) clamp.
+
+.TP
+.B updown.N.max \fR s32 io \fR(default: \fI0x7FFFFFFF\fR)
+( OR
+.B <newinstname>.max \fR s32 io \fR(default: \fI0x7FFFFFFF\fR) )
+
+.HP
+If clamp or wrap is set, count will never exceed this number
+.TP
+.B updown.N.min \fR s32 io \fR
+( OR
+.B <newinstname>.min \fR s32 io \fR )
+
+.HP
+If clamp or wrap is set, count will never be less than this number
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

@@ -1,0 +1,109 @@
+.TH DEBOUNCE "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+debounce \- Debounce filter for Machinekit HAL
+.SH SYNOPSIS
+.HP
+.HP
+debounce
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt debounce 
+.LP
+.B newinst debounce <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+The debounce filter works by incrementing a counter whenever the input is true,
+and decrementing the counter when it is false.  
+
+If the counter decrements to zero, the output is set false and the counter ignores further decrements.  
+
+Ifthe counter increments up to a threshold, the output is set true and the
+counter ignores further increments.  
+
+If the counter is between zero and the threshold, the output retains its previous state.  
+
+The threshold determines the amount of filtering: a threshold of 1 does no filtering at all, and a threshold
+of N requires a signal to be present for N samples before the output changes state.
+
+The default value for the counter is 5, the exact period that equates to, is dependent upon 
+the speed of the thread it is attached to
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBdebounce.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B debounce.N.#.in \fR bit in  (M=0..pincount) \fR
+( OR
+.B <newinstname>.#.in \fR bit in  (M=0..pincount) \fR )
+
+.TP
+.B debounce.N.#.out \fR bit out  (M=0..pincount) \fR
+( OR
+.B <newinstname>.#.out \fR bit out  (M=0..pincount) \fR )
+
+.TP
+.B debounce.N.#.state \fR s32 io  (M=0..pincount) \fR
+( OR
+.B <newinstname>.#.state \fR s32 io  (M=0..pincount) \fR )
+
+.TP
+.B debounce.N.delay \fR s32 io \fR(default: \fI5\fR)
+( OR
+.B <newinstname>.delay \fR s32 io \fR(default: \fI5\fR) )
+
+.SH INST_PARAMETERS
+.HP
+.HP
+.TP
+.B pincount\fR int \fR(default: \fI8\fR)
+.SH AUTHOR
+.HP
+.HP
+John Kasunich, adapted by ArcEye
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

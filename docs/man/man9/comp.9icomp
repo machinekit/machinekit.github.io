@@ -1,0 +1,102 @@
+.TH COMP "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+comp \- Two input comparator with hysteresis
+.SH SYNOPSIS
+.HP
+.HP
+comp
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt comp 
+.LP
+.B newinst comp <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBcomp.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+Update the comparator
+.SH PINS
+.HP
+.HP
+.TP
+.B comp.N.in0 \fR float in \fR
+( OR
+.B <newinstname>.in0 \fR float in \fR )
+
+.HP
+Inverting input to the comparator
+.TP
+.B comp.N.in1 \fR float in \fR
+( OR
+.B <newinstname>.in1 \fR float in \fR )
+
+.HP
+Non-inverting input to the comparator
+.TP
+.B comp.N.out \fR bit out \fR
+( OR
+.B <newinstname>.out \fR bit out \fR )
+
+.HP
+Normal output. True when *in1* > *in0* (see parameter *hyst* for details)
+.TP
+.B comp.N.equal \fR bit out \fR
+( OR
+.B <newinstname>.equal \fR bit out \fR )
+
+.HP
+Match output.  True when difference between *in1* and *in0* is less than *hyst*2
+.TP
+.B comp.N.hyst \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.hyst \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+
+Hysteresis of the comparator (default 0.0)
+
+With zero hysteresis, the output is true when *in1* > *in0*.  With nonzero
+hysteresis, the output switches on and off at two different values,
+separated by distance *hyst* around the point where *in1* = *in0*.
+Keep in mind that floating point calculations are never absolute
+and it is wise to always set *hyst* if you intend to use equal 
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

@@ -1,0 +1,81 @@
+.TH HYPOT "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+hypot \- Three-input hypotenuse (Euclidean distance) calculator
+.SH SYNOPSIS
+.HP
+.HP
+hypot
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt hypot 
+.LP
+.B newinst hypot <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBhypot.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B hypot.N.in0 \fR float in \fR
+( OR
+.B <newinstname>.in0 \fR float in \fR )
+
+.TP
+.B hypot.N.in1 \fR float in \fR
+( OR
+.B <newinstname>.in1 \fR float in \fR )
+
+.TP
+.B hypot.N.in2 \fR float in \fR
+( OR
+.B <newinstname>.in2 \fR float in \fR )
+
+.TP
+.B hypot.N.out \fR float out \fR
+( OR
+.B <newinstname>.out \fR float out \fR )
+
+.HP
+out = sqrt(in0^2 + in1^2 + in2^2)
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

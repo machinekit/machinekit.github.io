@@ -1,0 +1,203 @@
+.TH MULTICLICK "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+multiclick \- Single-, double-, triple-, and quadruple-click detector
+.SH SYNOPSIS
+.HP
+.HP
+multiclick
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt multiclick 
+.LP
+.B newinst multiclick <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+A click is defined as a rising edge on the 'in' pin,
+followed by the 'in' pin being True for at most 'max-hold-ns' nanoseconds,
+followed by a falling edge.
+
+A double-click is defined as two clicks, separated by at
+most 'max-space-ns' nanoseconds with the 'in' pin in the False state.
+
+I bet you can guess the definition of triple- and quadruple-click.
+
+You probably want to run the input signal through a debounce component
+before feeding it to the multiclick detector, if the input is at all
+noisy.
+
+The '*-click' pins go high as soon as the input detects the correct
+number of clicks.
+
+The '*-click-only' pins go high a short while after the click, after
+the click separator space timeout has expired to show that no further
+click is coming.  This is useful for triggering halui MDI commands.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBmulticlick.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+Detect single-, double-, triple-, and quadruple-clicks
+.SH PINS
+.HP
+.HP
+.TP
+.B multiclick.N.in \fR bit in \fR
+( OR
+.B <newinstname>.in \fR bit in \fR )
+
+.HP
+The input line, this is where we look for clicks.
+.TP
+.B multiclick.N.single_click \fR bit out \fR
+( OR
+.B <newinstname>.single_click \fR bit out \fR )
+
+.HP
+Goes high briefly when a single-click is detected on the 'in' pin.
+.TP
+.B multiclick.N.single_click_only \fR bit out \fR
+( OR
+.B <newinstname>.single_click_only \fR bit out \fR )
+
+.HP
+
+Goes high briefly when a single-click is detected on the 'in' pin
+and no second click followed it.
+
+.TP
+.B multiclick.N.double_click \fR bit out \fR
+( OR
+.B <newinstname>.double_click \fR bit out \fR )
+
+.HP
+Goes high briefly when a double-click is detected on the 'in' pin.
+.TP
+.B multiclick.N.double_click_only \fR bit out \fR
+( OR
+.B <newinstname>.double_click_only \fR bit out \fR )
+
+.HP
+
+Goes high briefly when a double-click is detected on the 'in' pin
+and no third click followed it.
+
+.TP
+.B multiclick.N.triple_click \fR bit out \fR
+( OR
+.B <newinstname>.triple_click \fR bit out \fR )
+
+.HP
+Goes high briefly when a triple-click is detected on the 'in' pin.
+.TP
+.B multiclick.N.triple_click_only \fR bit out \fR
+( OR
+.B <newinstname>.triple_click_only \fR bit out \fR )
+
+.HP
+
+Goes high briefly when a triple-click is detected on the 'in' pin
+and no fourth click followed it.
+
+.TP
+.B multiclick.N.quadruple_click \fR bit out \fR
+( OR
+.B <newinstname>.quadruple_click \fR bit out \fR )
+
+.HP
+Goes high briefly when a quadruple-click is detected on the 'in' pin.
+.TP
+.B multiclick.N.quadruple_click_only \fR bit out \fR
+( OR
+.B <newinstname>.quadruple_click_only \fR bit out \fR )
+
+.HP
+
+Goes high briefly when a quadruple-click is detected on the 'in'
+pin and no fifth click followed it.
+
+.TP
+.B multiclick.N.state \fR s32 out \fR
+( OR
+.B <newinstname>.state \fR s32 out \fR )
+
+.TP
+.B multiclick.N.invert_input \fR bit io \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.invert_input \fR bit io \fR(default: \fIfalse\fR) )
+
+.HP
+
+If false (the default), clicks start with rising edges.  If true,
+clicks start with falling edges.
+
+.TP
+.B multiclick.N.max_hold_ns \fR u32 io \fR(default: \fI250000000\fR)
+( OR
+.B <newinstname>.max_hold_ns \fR u32 io \fR(default: \fI250000000\fR) )
+
+.HP
+
+If the input is held down longer than this, it's not part of a
+multi-click.  (Default 250,000,000 ns, 250 ms.)
+
+.TP
+.B multiclick.N.max_space_ns \fR u32 io \fR(default: \fI250000000\fR)
+( OR
+.B <newinstname>.max_space_ns \fR u32 io \fR(default: \fI250000000\fR) )
+
+.HP
+
+If the input is released longer than this, it's not part of a
+multi-click.  (Default 250,000,000 ns, 250 ms.)
+
+.TP
+.B multiclick.N.output_hold_ns \fR u32 io \fR(default: \fI100000000\fR)
+( OR
+.B <newinstname>.output_hold_ns \fR u32 io \fR(default: \fI100000000\fR) )
+
+.HP
+
+Positive pulses on the output pins last this long.  (Default
+100,000,000 ns, 100 ms.)
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

@@ -1,0 +1,153 @@
+.TH MATCH8 "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+match8 \- 8-bit binary match detector
+.SH SYNOPSIS
+.HP
+.HP
+match8
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt match8 
+.LP
+.B newinst match8 <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBmatch8.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B match8.N.in \fR bit in \fR(default: \fItrue\fR)
+( OR
+.B <newinstname>.in \fR bit in \fR(default: \fItrue\fR) )
+
+.HP
+cascade input - if false, output is false regardless of other inputs
+.TP
+.B match8.N.a0 \fR bit in \fR
+( OR
+.B <newinstname>.a0 \fR bit in \fR )
+
+.TP
+.B match8.N.a1 \fR bit in \fR
+( OR
+.B <newinstname>.a1 \fR bit in \fR )
+
+.TP
+.B match8.N.a2 \fR bit in \fR
+( OR
+.B <newinstname>.a2 \fR bit in \fR )
+
+.TP
+.B match8.N.a3 \fR bit in \fR
+( OR
+.B <newinstname>.a3 \fR bit in \fR )
+
+.TP
+.B match8.N.a4 \fR bit in \fR
+( OR
+.B <newinstname>.a4 \fR bit in \fR )
+
+.TP
+.B match8.N.a5 \fR bit in \fR
+( OR
+.B <newinstname>.a5 \fR bit in \fR )
+
+.TP
+.B match8.N.a6 \fR bit in \fR
+( OR
+.B <newinstname>.a6 \fR bit in \fR )
+
+.TP
+.B match8.N.a7 \fR bit in \fR
+( OR
+.B <newinstname>.a7 \fR bit in \fR )
+
+.TP
+.B match8.N.b0 \fR bit in \fR
+( OR
+.B <newinstname>.b0 \fR bit in \fR )
+
+.TP
+.B match8.N.b1 \fR bit in \fR
+( OR
+.B <newinstname>.b1 \fR bit in \fR )
+
+.TP
+.B match8.N.b2 \fR bit in \fR
+( OR
+.B <newinstname>.b2 \fR bit in \fR )
+
+.TP
+.B match8.N.b3 \fR bit in \fR
+( OR
+.B <newinstname>.b3 \fR bit in \fR )
+
+.TP
+.B match8.N.b4 \fR bit in \fR
+( OR
+.B <newinstname>.b4 \fR bit in \fR )
+
+.TP
+.B match8.N.b5 \fR bit in \fR
+( OR
+.B <newinstname>.b5 \fR bit in \fR )
+
+.TP
+.B match8.N.b6 \fR bit in \fR
+( OR
+.B <newinstname>.b6 \fR bit in \fR )
+
+.TP
+.B match8.N.b7 \fR bit in \fR
+( OR
+.B <newinstname>.b7 \fR bit in \fR )
+
+.TP
+.B match8.N.out \fR bit out \fR
+( OR
+.B <newinstname>.out \fR bit out \fR )
+
+.HP
+true only if in is true and a[m] matches b[m] for m = 0 thru 7
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

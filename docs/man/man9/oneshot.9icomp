@@ -1,0 +1,126 @@
+.TH ONESHOT "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+oneshot \- one-shot pulse generator
+.SH SYNOPSIS
+.HP
+.HP
+oneshot
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt oneshot 
+.LP
+.B newinst oneshot <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+    Creates a variable-length output pulse when the input changes state. 
+    This function needs to run in a thread which supports floating point
+    (typically the servo thread). 
+    This means that the pulse length has to be a multiple of that thread period, typically 1mS.
+    For a similar function that can run in the base thread, and which offers higher
+    resolution, see "edge".
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBoneshot.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+Produce output pulses from input edges
+.SH PINS
+.HP
+.HP
+.TP
+.B oneshot.N.in \fR bit in \fR
+( OR
+.B <newinstname>.in \fR bit in \fR )
+
+.HP
+Trigger input
+.TP
+.B oneshot.N.out \fR bit out \fR
+( OR
+.B <newinstname>.out \fR bit out \fR )
+
+.HP
+Active high pulse
+.TP
+.B oneshot.N.out_not \fR bit out \fR
+( OR
+.B <newinstname>.out_not \fR bit out \fR )
+
+.HP
+Active low pulse
+.TP
+.B oneshot.N.width \fR float in \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.width \fR float in \fR(default: \fI0\fR) )
+
+.HP
+Pulse width in seconds
+.TP
+.B oneshot.N.time_left \fR float out \fR
+( OR
+.B <newinstname>.time_left \fR float out \fR )
+
+.HP
+Time left in current output pulse
+.TP
+.B oneshot.N.retriggerable \fR bit in \fR(default: \fItrue\fR)
+( OR
+.B <newinstname>.retriggerable \fR bit in \fR(default: \fItrue\fR) )
+
+.HP
+Allow additional edges to extend pulse
+.TP
+.B oneshot.N.rising \fR bit in \fR(default: \fItrue\fR)
+( OR
+.B <newinstname>.rising \fR bit in \fR(default: \fItrue\fR) )
+
+.HP
+Trigger on rising edge
+.TP
+.B oneshot.N.falling \fR bit in \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.falling \fR bit in \fR(default: \fIfalse\fR) )
+
+.HP
+Trigger on falling edge
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

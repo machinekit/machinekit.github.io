@@ -1,0 +1,179 @@
+.TH LGANTRY "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+lgantry \- Machinekit HAL component for driving multiple joints from a single axis
+.SH SYNOPSIS
+.HP
+.HP
+lgantry
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt lgantry 
+.LP
+.B newinst lgantry <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Drives multiple physical motors (joints) from a single axis input
+
+The 'pincount' value is the number of joints to control.  Two is typical, but
+up to seven is supported (a three joint setup has been tested with hardware).
+
+All controlled joints track the commanded position (with a per-joint offset)
+unless in the process of latching.  Latching is when the commanded position is
+moving away the from the homing switches (as determined by the sign of search-vel),
+the joint home switches are not all in the same state and homing is active.  When the system is
+latching and a joint home switch deactivates, the command value sent to that joint
+is "frozen" and the joint offset value is updated instead.  Once all home
+switches are deactivated, there are no more adjustments made to the offset values
+and all joints run in lock-step once more.
+
+For best results, set HOME_SEARCH_VEL and HOME_LATCH_VEL to the opposite direction
+and as slow as practical.  When a joint home switch trips, the commanded
+velocity will drop immediately from HOME_SEARCH_VEL to zero, with no limit on
+accleration.
+
+The latching gantry component is the opposite of the normal gantry component. It
+makes sense to use it with home switches that have a reproduceable deactivation hysteresis.
+
+Using the per joint home-offset input it is possible add a small offset when latching.
+This makes it possible to adjust small differences in the endstop positions of the gantry setup.
+
+The homing input must be connected to the axis homing output motion in order to enable
+the gantry component. When the axis is not homing latching will not be activated.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBlgantry.N.read.funct\fR 
+( OR
+\fB<newinstname>.read.funct\fR (requires a floating-point thread) )
+.HP
+Update position-fb and home/limit outputs based on joint values
+.TP
+\fBlgantry.N.write.funct\fR 
+( OR
+\fB<newinstname>.write.funct\fR (requires a floating-point thread) )
+.HP
+Update joint pos-cmd outputs based on position-cmd in
+.SH PINS
+.HP
+.HP
+.TP
+.B lgantry.N.joint.##.pos-cmd \fR float out  (MM=00..pincount) \fR
+( OR
+.B <newinstname>.joint.##.pos-cmd \fR float out  (MM=00..pincount) \fR )
+
+.HP
+Per-joint commanded position
+.TP
+.B lgantry.N.joint.##.pos-fb \fR float in  (MM=00..pincount) \fR
+( OR
+.B <newinstname>.joint.##.pos-fb \fR float in  (MM=00..pincount) \fR )
+
+.HP
+Per-joint position feedback
+.TP
+.B lgantry.N.joint.##.home \fR bit in  (MM=00..pincount) \fR
+( OR
+.B <newinstname>.joint.##.home \fR bit in  (MM=00..pincount) \fR )
+
+.HP
+Per-joint home switch
+.TP
+.B lgantry.N.joint.##.home-offset \fR float in  (MM=00..pincount) \fR
+( OR
+.B <newinstname>.joint.##.home-offset \fR float in  (MM=00..pincount) \fR )
+
+.HP
+Per-joint home offset for fine tuning
+.TP
+.B lgantry.N.joint.##.offset \fR float out  (MM=00..pincount) \fR
+( OR
+.B <newinstname>.joint.##.offset \fR float out  (MM=00..pincount) \fR )
+
+.HP
+(debugging) Per-joint offset value, updated when homing
+.TP
+.B lgantry.N.position-cmd \fR float in \fR
+( OR
+.B <newinstname>.position-cmd \fR float in \fR )
+
+.HP
+Commanded position from motion
+.TP
+.B lgantry.N.position-fb \fR float out \fR
+( OR
+.B <newinstname>.position-fb \fR float out \fR )
+
+.HP
+Position feedback to motion
+.TP
+.B lgantry.N.homing \fR bit in \fR
+( OR
+.B <newinstname>.homing \fR bit in \fR )
+
+.HP
+Axis homing state from motion
+.TP
+.B lgantry.N.home \fR bit out \fR
+( OR
+.B <newinstname>.home \fR bit out \fR )
+
+.HP
+Combined home signal, true if all joint home inputs are true
+.TP
+.B lgantry.N.limit \fR bit out \fR
+( OR
+.B <newinstname>.limit \fR bit out \fR )
+
+.HP
+Combined limit signal, true if any joint home input is true
+.TP
+.B lgantry.N.search-vel \fR float in \fR
+( OR
+.B <newinstname>.search-vel \fR float in \fR )
+
+.HP
+HOME_SEARCH_VEL from ini file
+.SH INST_PARAMETERS
+.HP
+.HP
+.TP
+.B pincount\fR int \fR(default: \fI7\fR)
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

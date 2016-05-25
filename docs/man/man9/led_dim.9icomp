@@ -1,0 +1,81 @@
+.TH LED_DIM "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+led_dim \- LinuxCNC HAL component for dimming LEDs
+.SH SYNOPSIS
+.HP
+.HP
+led_dim
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt led_dim 
+.LP
+.B newinst led_dim <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Component for LED dimming according to human perception of brightness of light.
+
+The output is calculated using the CIE 1931 formula.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBled_dim.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+Update the output value
+.SH PINS
+.HP
+.HP
+.TP
+.B led_dim.N.in \fR float in \fR
+( OR
+.B <newinstname>.in \fR float in \fR )
+
+.HP
+Brightness input value -> 0 to 1
+.TP
+.B led_dim.N.out \fR float out \fR
+( OR
+.B <newinstname>.out \fR float out \fR )
+
+.HP
+Luminance output value -> 0 to 1
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

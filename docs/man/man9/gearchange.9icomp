@@ -1,0 +1,155 @@
+.TH GEARCHANGE "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+gearchange \- Select from one two speed ranges
+.SH SYNOPSIS
+.HP
+.HP
+gearchange
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt gearchange 
+.LP
+.B newinst gearchange <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Select from one two speed ranges
+
+The output will be a value scaled for the selected gear, and clamped to
+the min/max values for that gear.
+
+The scale of gear 1 is assumed to be 1, so the output device scale
+should be chosen accordingly.
+
+The scale of gear 2 is relative to gear 1, so if gear 2 runs the spindle
+2.5 times as fast as gear 1, scale2 should be set to 2.5.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBgearchange.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B gearchange.N.sel \fR bit in \fR
+( OR
+.B <newinstname>.sel \fR bit in \fR )
+
+.HP
+Gear selection input
+.TP
+.B gearchange.N.speed_in \fR float in \fR
+( OR
+.B <newinstname>.speed_in \fR float in \fR )
+
+.HP
+Speed command input
+.TP
+.B gearchange.N.speed_out \fR float out \fR
+( OR
+.B <newinstname>.speed_out \fR float out \fR )
+
+.HP
+Speed command to DAC/PWM
+.TP
+.B gearchange.N.dir_in \fR bit in \fR
+( OR
+.B <newinstname>.dir_in \fR bit in \fR )
+
+.HP
+Direction command input
+.TP
+.B gearchange.N.dir_out \fR bit out \fR
+( OR
+.B <newinstname>.dir_out \fR bit out \fR )
+
+.HP
+Direction output - possibly inverted for second gear
+.TP
+.B gearchange.N.min1 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.min1 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Minimum allowed speed in gear range 1
+.TP
+.B gearchange.N.max1 \fR float io \fR(default: \fI100000\fR)
+( OR
+.B <newinstname>.max1 \fR float io \fR(default: \fI100000\fR) )
+
+.HP
+Maximum allowed speed in gear range 1
+.TP
+.B gearchange.N.min2 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.min2 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Minimum allowed speed in gear range 2
+.TP
+.B gearchange.N.max2 \fR float io \fR(default: \fI100000\fR)
+( OR
+.B <newinstname>.max2 \fR float io \fR(default: \fI100000\fR) )
+
+.HP
+Maximum allowed speed in gear range 2
+.TP
+.B gearchange.N.scale2 \fR float io \fR(default: \fI1.0\fR)
+( OR
+.B <newinstname>.scale2 \fR float io \fR(default: \fI1.0\fR) )
+
+.HP
+
+Relative scale of gear 2 vs. gear 1
+Since it is assumed that gear 2 is "high gear", *scale2* must be
+greater than 1, and will be reset to 1 if set lower.
+
+.TP
+.B gearchange.N.reverse \fR bit io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.reverse \fR bit io \fR(default: \fI0.0\fR) )
+
+.HP
+Set to 1 to reverse the spindle in second gear
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

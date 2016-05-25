@@ -1,0 +1,36 @@
+.TH CONV_BIT_U32 "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+conv_bit_u32 \- Convert a value from bit to u32
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt conv_bit_u32 [count=\fIN\fB|names=\fIname1\fB[,\fIname2...\fB]]
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBconv-bit-u32.\fIN\fB\fR
+Update 'out' based on 'in'
+.SH PINS
+.HP
+.HP
+.TP
+.B conv-bit-u32.\fIN\fB.in\fR bit in \fR
+.TQ
+.B conv-bit-u32.\fIN\fB.out\fR u32 out \fR
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

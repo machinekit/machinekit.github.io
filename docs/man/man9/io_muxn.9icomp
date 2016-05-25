@@ -1,0 +1,89 @@
+.TH IO_MUXN "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+io_muxn \- Gate one of N input values
+.SH SYNOPSIS
+.HP
+.HP
+io_muxn
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt io_muxn 
+.LP
+.B newinst io_muxn <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBio_muxn.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B io_muxn.N.sel \fR s32 in \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.sel \fR s32 in \fR(default: \fI0\fR) )
+
+.TP
+.B io_muxn.N.out \fR float io \fR
+( OR
+.B <newinstname>.out \fR float io \fR )
+
+.HP
+
+Follows the value of *in<M>* whereas M is the value of the *sel* input.
+If *sel* is not in the range of available inputs 0 is output.
+
+.TP
+.B io_muxn.N.in#. \fR float io  (M=0..pincount) \fR
+( OR
+.B <newinstname>.in#. \fR float io  (M=0..pincount) \fR )
+
+.SH INST_PARAMETERS
+.HP
+.HP
+.TP
+.B pincount\fR int \fR(default: \fI2\fR)
+.SH AUTHOR
+.HP
+.HP
+Alexander Roessler
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

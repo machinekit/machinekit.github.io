@@ -1,0 +1,86 @@
+.TH OR2 "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+or2 \- Two-input OR gate
+.SH SYNOPSIS
+.HP
+.HP
+or2
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt or2 
+.LP
+.B newinst or2 <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBor2.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B or2.N.in0 \fR bit in \fR
+( OR
+.B <newinstname>.in0 \fR bit in \fR )
+
+.TP
+.B or2.N.in1 \fR bit in \fR
+( OR
+.B <newinstname>.in1 \fR bit in \fR )
+
+.TP
+.B or2.N.out \fR bit out \fR
+( OR
+.B <newinstname>.out \fR bit out \fR )
+
+.HP
+
+*out* is computed from the value of *in0* and *in1* according
+to the following rule:
+
+    in0=FALSE in1=FALSE
+    out=FALSE
+
+Otherwise,
+
+    out=TRUE
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

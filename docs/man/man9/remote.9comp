@@ -1,0 +1,38 @@
+.TH REMOTE "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+remote \- demonstrate a remote component
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt remote
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBremote\fR (requires a floating-point thread)
+
+.SH PINS
+.HP
+.HP
+.TP
+.B remote.to-remote\fR float in \fR
+a value passed to a remote HAL component
+.TP
+.B remote.from-remote\fR float in \fR
+a value updated by a remote HAL component
+.HP
+.SH LICENCE
+.HP
+.HP
+GPLv2 or later
+.HP

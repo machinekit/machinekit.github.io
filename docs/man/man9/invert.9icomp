@@ -1,0 +1,82 @@
+.TH INVERT "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+invert \- 
+.SH SYNOPSIS
+.HP
+.HP
+Compute the inverse of the input signal
+The output will be the mathematical inverse of the input, ie *out* = 1 / *in*.
+The parameter *deadband* can be used to control how close to 0 the denominator can be
+before the output is clamped to 0.  *deadband* must be at least 1e-8, and must be positive.
+
+.SH USAGE SYNOPSIS
+.HP
+.HP
+Compute the inverse of the input signal
+The output will be the mathematical inverse of the input, ie *out* = 1 / *in*.
+The parameter *deadband* can be used to control how close to 0 the denominator can be
+before the output is clamped to 0.  *deadband* must be at least 1e-8, and must be positive.
+
+.HP
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBinvert.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B invert.N.in \fR float in \fR
+( OR
+.B <newinstname>.in \fR float in \fR )
+
+.HP
+Analog input value
+.TP
+.B invert.N.out \fR float out \fR
+( OR
+.B <newinstname>.out \fR float out \fR )
+
+.HP
+Analog output value
+.TP
+.B invert.N.deadband \fR float io \fR
+( OR
+.B <newinstname>.deadband \fR float io \fR )
+
+.HP
+The *out* will be zero if *in* is between -*deadband* and +*deadband*
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

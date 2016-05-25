@@ -1,0 +1,114 @@
+.TH MUX4 "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+mux4 \- Select from one of four input values
+.SH SYNOPSIS
+.HP
+.HP
+mux4
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt mux4 
+.LP
+.B newinst mux4 <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBmux4.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B mux4.N.sel0 \fR bit in \fR
+( OR
+.B <newinstname>.sel0 \fR bit in \fR )
+
+.TP
+.B mux4.N.sel1 \fR bit in \fR
+( OR
+.B <newinstname>.sel1 \fR bit in \fR )
+
+.HP
+
+Together, these determine which *inN* value is copied to *out*.
+
+.TP
+.B mux4.N.out \fR float out \fR
+( OR
+.B <newinstname>.out \fR float out \fR )
+
+.HP
+
+Follows the value of one of the *inN* values according to the two *sel* values
+
+    sel1=FALSE, sel0=FALSE
+    out follows in0
+
+    sel1=FALSE, sel0=TRUE
+    out follows in1
+
+    sel1=TRUE, sel0=FALSE
+    out follows in2
+
+    sel1=TRUE, sel0=TRUE
+    out follows in3
+
+.TP
+.B mux4.N.in0 \fR float in \fR
+( OR
+.B <newinstname>.in0 \fR float in \fR )
+
+.TP
+.B mux4.N.in1 \fR float in \fR
+( OR
+.B <newinstname>.in1 \fR float in \fR )
+
+.TP
+.B mux4.N.in2 \fR float in \fR
+( OR
+.B <newinstname>.in2 \fR float in \fR )
+
+.TP
+.B mux4.N.in3 \fR float in \fR
+( OR
+.B <newinstname>.in3 \fR float in \fR )
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

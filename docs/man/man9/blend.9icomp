@@ -1,0 +1,97 @@
+.TH BLEND "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+blend \- Perform linear interpolation between two values
+.SH SYNOPSIS
+.HP
+.HP
+blend
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt blend 
+.LP
+.B newinst blend <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBblend.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B blend.N.in1 \fR float in \fR
+( OR
+.B <newinstname>.in1 \fR float in \fR )
+
+.HP
+First input.  If select is equal to 1.0, the output is equal to in1
+.TP
+.B blend.N.in2 \fR float in \fR
+( OR
+.B <newinstname>.in2 \fR float in \fR )
+
+.HP
+Second input.  If select is equal to 0.0, the output is equal to in2
+.TP
+.B blend.N.select \fR float in \fR
+( OR
+.B <newinstname>.select \fR float in \fR )
+
+.HP
+Select input.  For values between 0.0 and 1.0, the output changes linearly from in2 to in1
+.TP
+.B blend.N.out \fR float out \fR
+( OR
+.B <newinstname>.out \fR float out \fR )
+
+.HP
+Output value.
+.TP
+.B blend.N.open \fR bit io \fR
+( OR
+.B <newinstname>.open \fR bit io \fR )
+
+.HP
+
+If true, select values outside the range 0.0 to 1.0 give values outside the range in2 to in1.  
+If false, outputs are clamped to the the range in2 to in1
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

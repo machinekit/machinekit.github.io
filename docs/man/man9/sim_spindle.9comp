@@ -1,0 +1,55 @@
+.TH SIM_SPINDLE "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+sim_spindle \- Simulated spindle with index pulse
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt sim_spindle [count=\fIN\fB|names=\fIname1\fB[,\fIname2...\fB]]
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBsim-spindle.\fIN\fB\fR (requires a floating-point thread)
+
+.SH PINS
+.HP
+.HP
+.TP
+.B sim-spindle.\fIN\fB.velocity-cmd\fR float in \fR
+Commanded speed
+.TP
+.B sim-spindle.\fIN\fB.position-fb\fR float out \fR
+Feedback position, in revolutions
+.TP
+.B sim-spindle.\fIN\fB.index-enable\fR bit io \fR
+Reset position-fb to 0 at the next full rotation
+.SH PARAMETERS
+.HP
+.HP
+.TP
+.B sim-spindle.\fIN\fB.scale\fR float rw \fR(default: \fI1.0\fR)
+
+factor applied to *velocity-cmd*.
+
+The result of 'velocity-cmd * scale' be in revolutions per second.
+
+For example, 
+
+if *velocity-cmd* is in revolutions/minute, *scale* should be set to 1/60 or 0.016666667.
+
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

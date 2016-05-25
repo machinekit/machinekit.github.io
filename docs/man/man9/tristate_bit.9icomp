@@ -1,0 +1,80 @@
+.TH TRISTATE_BIT "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+tristate_bit \- Place a signal on an I/O pin only when enabled, similar to a tristate buffer in electronics
+.SH SYNOPSIS
+.HP
+.HP
+tristate_bit
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt tristate_bit 
+.LP
+.B newinst tristate_bit <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBtristate_bit.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+If *enable* is TRUE, copy *in* to *out*.
+.SH PINS
+.HP
+.HP
+.TP
+.B tristate_bit.N.in_ \fR bit in \fR
+( OR
+.B <newinstname>.in_ \fR bit in \fR )
+
+.HP
+Input value
+.TP
+.B tristate_bit.N.out \fR bit io \fR
+( OR
+.B <newinstname>.out \fR bit io \fR )
+
+.HP
+Output value
+.TP
+.B tristate_bit.N.enable \fR bit in \fR
+( OR
+.B <newinstname>.enable \fR bit in \fR )
+
+.HP
+When TRUE, copy in to out
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

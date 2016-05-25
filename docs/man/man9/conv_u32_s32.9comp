@@ -1,0 +1,45 @@
+.TH CONV_U32_S32 "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+conv_u32_s32 \- Convert a value from u32 to s32
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt conv_u32_s32 [count=\fIN\fB|names=\fIname1\fB[,\fIname2...\fB]]
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBconv-u32-s32.\fIN\fB\fR
+Update 'out' based on 'in'
+.SH PINS
+.HP
+.HP
+.TP
+.B conv-u32-s32.\fIN\fB.in\fR u32 in \fR
+.TQ
+.B conv-u32-s32.\fIN\fB.out\fR s32 out \fR
+.TQ
+.B conv-u32-s32.\fIN\fB.out-of-range\fR bit out \fR
+TRUE when 'in' is not in the range of s32
+.SH PARAMETERS
+.HP
+.HP
+.TP
+.B conv-u32-s32.\fIN\fB.clamp\fR bit rw \fR
+If TRUE, then clamp to the range of s32.  If FALSE, then allow the value to "wrap around".
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

@@ -1,0 +1,101 @@
+.TH WEIGHTED_SUM "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+weighted_sum \- Weighted Summer for Machinekit HAL
+.SH SYNOPSIS
+.HP
+.HP
+weighted_sum
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt weighted_sum 
+.LP
+.B newinst weighted_sum <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBweighted_sum.N.process_wsums.funct\fR 
+( OR
+\fB<newinstname>.process_wsums.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B weighted_sum.N.in## \fR bit in  (MM=00..pincount) \fR
+( OR
+.B <newinstname>.in## \fR bit in  (MM=00..pincount) \fR )
+
+.HP
+The ## inputs of weighted summer
+.TP
+.B weighted_sum.N.hold \fR bit in \fR
+( OR
+.B <newinstname>.hold \fR bit in \fR )
+
+.HP
+
+When TRUE, the sum output does not change.
+
+When FALSE, the sum output tracks the bit inputs according to the weights and offset.
+
+.TP
+.B weighted_sum.N.sum \fR s32 out \fR
+( OR
+.B <newinstname>.sum \fR s32 out \fR )
+
+.HP
+The output of the weighted summer
+.TP
+.B weighted_sum.N.weight## \fR s32 io  (MM=00..pincount) \fR
+( OR
+.B <newinstname>.weight## \fR s32 io  (MM=00..pincount) \fR )
+
+.HP
+The weight of the input of weighted summer ##. The default value is 2^m.
+.TP
+.B weighted_sum.N.offset \fR s32 io \fR
+( OR
+.B <newinstname>.offset \fR s32 io \fR )
+
+.SH INST_PARAMETERS
+.HP
+.HP
+.TP
+.B pincount\fR int \fR(default: \fI8\fR)
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

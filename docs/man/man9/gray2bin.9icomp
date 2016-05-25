@@ -1,0 +1,84 @@
+.TH GRAY2BIN "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+gray2bin \- convert a gray-code input to binary
+.SH SYNOPSIS
+.HP
+.HP
+gray2bin
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt gray2bin 
+.LP
+.B newinst gray2bin <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Converts a gray-coded number into the corresponding binary value
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBgray2bin.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B gray2bin.N.in \fR u32 in \fR
+( OR
+.B <newinstname>.in \fR u32 in \fR )
+
+.HP
+gray code in
+.TP
+.B gray2bin.N.out \fR u32 out \fR
+( OR
+.B <newinstname>.out \fR u32 out \fR )
+
+.HP
+binary code out
+.SH AUTHOR
+.HP
+.HP
+andy pugh
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

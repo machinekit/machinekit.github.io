@@ -1,0 +1,100 @@
+.TH DIV2 "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+div2 \- Quotient of two inputs
+.SH SYNOPSIS
+.HP
+.HP
+div2
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt div2 
+.LP
+.B newinst div2 <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Quotient of two inputs
+
+The output will be quotient of the two inputs, ie *out* = *in0* / *in1*.
+
+The parameter *deadband* can be used to control how close to 0 the denominator can be
+before the output is clamped to 0.  
+
+*deadband* must be at least 1e-8, and must be positive.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBdiv2.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B div2.N.in0 \fR float in \fR
+( OR
+.B <newinstname>.in0 \fR float in \fR )
+
+.HP
+dividend
+.TP
+.B div2.N.in1 \fR float in \fR
+( OR
+.B <newinstname>.in1 \fR float in \fR )
+
+.HP
+divisor
+.TP
+.B div2.N.out \fR float out \fR
+( OR
+.B <newinstname>.out \fR float out \fR )
+
+.HP
+out = in0 / in1
+.TP
+.B div2.N.deadband \fR float io \fR
+( OR
+.B <newinstname>.deadband \fR float io \fR )
+
+.HP
+The *out* will be zero if *in1* is between - *deadband* and + *deadband*
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

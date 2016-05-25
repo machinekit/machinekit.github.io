@@ -1,0 +1,104 @@
+.TH OUT_TO_IO "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+out_to_io \- converts a signal driven by an out pin to a change sensitive io signal
+.SH SYNOPSIS
+.HP
+.HP
+out_to_io
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt out_to_io 
+.LP
+.B newinst out_to_io <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBout_to_io.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B out_to_io.N.in_u32 \fR u32 in \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.in_u32 \fR u32 in \fR(default: \fI0\fR) )
+
+.TP
+.B out_to_io.N.in_s32 \fR s32 in \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.in_s32 \fR s32 in \fR(default: \fI0\fR) )
+
+.TP
+.B out_to_io.N.in_float \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.in_float \fR float in \fR(default: \fI0.0\fR) )
+
+.TP
+.B out_to_io.N.in_bit \fR bit in \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.in_bit \fR bit in \fR(default: \fIfalse\fR) )
+
+.TP
+.B out_to_io.N.out_u32 \fR u32 io \fR
+( OR
+.B <newinstname>.out_u32 \fR u32 io \fR )
+
+.TP
+.B out_to_io.N.out_s32 \fR s32 io \fR
+( OR
+.B <newinstname>.out_s32 \fR s32 io \fR )
+
+.TP
+.B out_to_io.N.out_float \fR float io \fR
+( OR
+.B <newinstname>.out_float \fR float io \fR )
+
+.TP
+.B out_to_io.N.out_bit \fR bit io \fR
+( OR
+.B <newinstname>.out_bit \fR bit io \fR )
+
+.SH AUTHOR
+.HP
+.HP
+Alexander Roessler
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

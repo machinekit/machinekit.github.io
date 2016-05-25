@@ -1,0 +1,225 @@
+.TH THCUD "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+thcud \- Torch Height Control Up/Down Input
+.SH SYNOPSIS
+.HP
+.HP
+thcud
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt thcud 
+.LP
+.B newinst thcud <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Torch Height Control
+This THC takes either an up or a down input from a THC
+
+If enabled and torch is on and X + Y velocity is within tolerance of set speed
+allow the THC to offset the Z axis as needed to maintain voltage.
+
+If enabled and torch is off and the Z axis is moving up remove any correction
+at a rate not to exceed the rate of movement of the Z axis.
+
+If enabled and torch is off and there is no correction
+pass the Z position and feed back untouched.
+
+If not enabled pass the Z position and feed back untouched.
+
+*Physical Connections typical*
+paraport.0.pin-12-in <= THC controller Plasma Up
+paraport.0.pin-13-in <= THC controller Plasma Down
+parport.0.pin-15-in  <= Plasma Torch Arc Ok Signal
+parport.0.pin-16-out => Plasma Torch Start Arc Contacts
+
+*HAL Plasma Connections*
+thc.torch-up <= paraport.0.pin-12-in
+thc.torch-down <= paraport.0.pin-13-in
+motion.spindle-on => parport.0.pin-16-out (start the arc)
+thc.arc-ok <= motion.digital-in-00 <= parport.0.pin-15-in (arc ok signal)
+
+*HAL Motion Connections*
+thc.requested-vel <= motion.requested-vel
+thc.current-vel <= motion.current-vel
+
+*Pyvcp Connections*
+In the xml file you need something like:
+
+    <checkbutton>
+      <text>"THC Enable"</text>
+      <halpin>"thc-enable"</halpin>
+    </checkbutton>
+    <spinbox>
+      <width>"5"</width>
+      <halpin>"vel-tol"</halpin>
+      <min_>.01</min_>
+      <max_>1</max_>
+      <resolution>0.01</resolution>
+      <initval>0.2</initval>
+      <format>"1.2f"</format>
+      <font>("Arial",10)</font>
+    </spinbox>
+
+Connect the Pyvcp pins in the postgui.hal file like this:
+
+net thc-enable thcud.enable <= pyvcp.thc-enable
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBthcud.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B thcud.N.torch_up \fR bit in \fR
+( OR
+.B <newinstname>.torch_up \fR bit in \fR )
+
+.HP
+Connect to an input pin
+.TP
+.B thcud.N.torch_down \fR bit in \fR
+( OR
+.B <newinstname>.torch_down \fR bit in \fR )
+
+.HP
+Connect to input pin
+.TP
+.B thcud.N.current_vel \fR float in \fR
+( OR
+.B <newinstname>.current_vel \fR float in \fR )
+
+.HP
+Connect to motion.current-vel
+.TP
+.B thcud.N.requested_vel \fR float in \fR
+( OR
+.B <newinstname>.requested_vel \fR float in \fR )
+
+.HP
+Connect to motion.requested-vel
+.TP
+.B thcud.N.torch_on \fR bit in \fR
+( OR
+.B <newinstname>.torch_on \fR bit in \fR )
+
+.HP
+Connect to motion.spindle-on
+.TP
+.B thcud.N.arc_ok \fR bit in \fR
+( OR
+.B <newinstname>.arc_ok \fR bit in \fR )
+
+.HP
+Arc Ok from Plasma Torch
+.TP
+.B thcud.N.enable \fR bit in \fR
+( OR
+.B <newinstname>.enable \fR bit in \fR )
+
+.HP
+Enable the THC, if not enabled Z position is passed through
+.TP
+.B thcud.N.z_pos_in \fR float in \fR
+( OR
+.B <newinstname>.z_pos_in \fR float in \fR )
+
+.HP
+Z Motor Position Command in from axis.n.motor-pos-cmd
+.TP
+.B thcud.N.z_pos_out \fR float out \fR
+( OR
+.B <newinstname>.z_pos_out \fR float out \fR )
+
+.HP
+Z Motor Position Command Out
+.TP
+.B thcud.N.z_fb_out \fR float out \fR
+( OR
+.B <newinstname>.z_fb_out \fR float out \fR )
+
+.HP
+Z Position Feedback to Axis
+.TP
+.B thcud.N.cur_offset \fR float out \fR
+( OR
+.B <newinstname>.cur_offset \fR float out \fR )
+
+.HP
+The Current Offset
+.TP
+.B thcud.N.vel_status \fR bit out \fR
+( OR
+.B <newinstname>.vel_status \fR bit out \fR )
+
+.HP
+When the THC thinks we are at requested speed
+.TP
+.B thcud.N.removing_offset \fR bit out \fR
+( OR
+.B <newinstname>.removing_offset \fR bit out \fR )
+
+.HP
+Pin for testing
+.TP
+.B thcud.N.velocity_tol \fR float io \fR
+( OR
+.B <newinstname>.velocity_tol \fR float io \fR )
+
+.HP
+The deviation percent from planned velocity
+.TP
+.B thcud.N.correction_vel \fR float io \fR
+( OR
+.B <newinstname>.correction_vel \fR float io \fR )
+
+.HP
+The Velocity to move Z to correct
+.SH AUTHOR
+.HP
+.HP
+John Thornton
+.HP
+.SH LICENCE
+.HP
+.HP
+GPLv2 or greater
+.HP

@@ -1,0 +1,41 @@
+.TH RTFAULT "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+rtfault \- generate RT faults on purpose
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt rtfault
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBrtfault\fR (requires a floating-point thread)
+
+.SH PINS
+.HP
+.HP
+.TP
+.B rtfault.fault\fR bit in \fR
+cause a series of count RT faults
+.TP
+.B rtfault.count\fR u32 in \fR
+number of faults
+.TP
+.B rtfault.delay\fR u32 in \fR
+ms delay on fault ⁽less than 1000)
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

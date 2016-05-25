@@ -1,0 +1,59 @@
+.TH RINGWRITE "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+ringwrite \- demonstrate wring write operations
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt ringwrite
+.SH DESCRIPTION
+.HP
+.HP
+
+Demonstration of ringwrite operations
+
+Will output
+....
+    Number of messages
+    Number of failed writes
+    Number of dropped writes
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBringwrite\fR (requires a floating-point thread)
+
+.SH PINS
+.HP
+.HP
+.TP
+.B ringwrite.write\fR bit in \fR
+send a message on pin transition
+.TP
+.B ringwrite.sent\fR u32 out \fR
+number of messages written
+.TP
+.B ringwrite.overrun\fR u32 out \fR
+number of failed write attempts
+.TP
+.B ringwrite.dropped\fR u32 out \fR
+number of records deleted when writing to full buffer
+.TP
+.B ringwrite.circular\fR bit in \fR
+circular flag - set to nonzero to enable circular record buffer
+.HP
+.SH LICENCE
+.HP
+.HP
+GPLv2 or later
+.HP

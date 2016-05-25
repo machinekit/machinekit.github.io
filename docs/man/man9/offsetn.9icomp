@@ -1,0 +1,116 @@
+.TH OFFSETN "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+offsetn \- Adds and subtracts an offset
+.SH SYNOPSIS
+.HP
+.HP
+offsetn
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt offsetn 
+.LP
+.B newinst offsetn <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Adds an offset to an input and subtracts it from the feedback value, 1 to 9 pin sets
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBoffsetn.N.update_output.funct\fR 
+( OR
+\fB<newinstname>.update_output.funct\fR (requires a floating-point thread) )
+.HP
+Updated the output value by adding the offset to the input
+.TP
+\fBoffsetn.N.update_feedback.funct\fR 
+( OR
+\fB<newinstname>.update_feedback.funct\fR (requires a floating-point thread) )
+.HP
+Update the feedback value by subtracting the offset from the feedback
+.SH PINS
+.HP
+.HP
+.TP
+.B offsetn.N.#.offset \fR float in  (M=0..pincount) \fR
+( OR
+.B <newinstname>.#.offset \fR float in  (M=0..pincount) \fR )
+
+.HP
+The offset value
+.TP
+.B offsetn.N.#.in \fR float in  (M=0..pincount) \fR
+( OR
+.B <newinstname>.#.in \fR float in  (M=0..pincount) \fR )
+
+.HP
+The input value
+.TP
+.B offsetn.N.#.out \fR float out  (M=0..pincount) \fR
+( OR
+.B <newinstname>.#.out \fR float out  (M=0..pincount) \fR )
+
+.HP
+The output value
+.TP
+.B offsetn.N.#.fb_in \fR float in  (M=0..pincount) \fR
+( OR
+.B <newinstname>.#.fb_in \fR float in  (M=0..pincount) \fR )
+
+.HP
+The feedback input value
+.TP
+.B offsetn.N.#.fb_out \fR float out  (M=0..pincount) \fR
+( OR
+.B <newinstname>.#.fb_out \fR float out  (M=0..pincount) \fR )
+
+.HP
+The feedback output value
+.SH INST_PARAMETERS
+.HP
+.HP
+.TP
+.B pincount\fR int \fR(default: \fI1\fR)
+.SH AUTHOR
+.HP
+.HP
+ArcEye <arceye@mgwareDOTcoDOTuk>
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

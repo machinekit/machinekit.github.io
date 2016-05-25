@@ -1,0 +1,114 @@
+.TH CLARKE3 "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+clarke3 \- Clarke (3 phase to cartesian) transform
+.SH SYNOPSIS
+.HP
+.HP
+clarke3
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt clarke3 
+.LP
+.B newinst clarke3 <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+The Clarke transform can be used to translate a vector
+quantity from a three phase system (three components 120 degrees
+apart) to a two phase Cartesian system (plus a homopolar component
+if the three phases don't sum to zero).
+*clarke3* implements the general case of the transform, using all three phases.  
+If the three phases are known to sum to zero, see *clarke2* for a
+simpler version.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBclarke3.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B clarke3.N.a \fR float in \fR
+( OR
+.B <newinstname>.a \fR float in \fR )
+
+.TP
+.B clarke3.N.b \fR float in \fR
+( OR
+.B <newinstname>.b \fR float in \fR )
+
+.TP
+.B clarke3.N.c \fR float in \fR
+( OR
+.B <newinstname>.c \fR float in \fR )
+
+.HP
+three phase input vector
+.TP
+.B clarke3.N.x \fR float out \fR
+( OR
+.B <newinstname>.x \fR float out \fR )
+
+.TP
+.B clarke3.N.y \fR float out \fR
+( OR
+.B <newinstname>.y \fR float out \fR )
+
+.HP
+cartesian components of output
+.TP
+.B clarke3.N.h \fR float out \fR
+( OR
+.B <newinstname>.h \fR float out \fR )
+
+.HP
+homopolar component of output
+.SH SEE ALSO
+.HP
+.HP
+
+*clarke2* for the 'a+b+c=0' case, *clarkeinv* forthe inverse transform.
+
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

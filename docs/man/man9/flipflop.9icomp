@@ -1,0 +1,94 @@
+.TH FLIPFLOP "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+flipflop \- D type flip-flop
+.SH SYNOPSIS
+.HP
+.HP
+flipflop
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt flipflop 
+.LP
+.B newinst flipflop <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBflipflop.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B flipflop.N.data_ \fR bit in \fR
+( OR
+.B <newinstname>.data_ \fR bit in \fR )
+
+.HP
+data input
+.TP
+.B flipflop.N.clk \fR bit in \fR
+( OR
+.B <newinstname>.clk \fR bit in \fR )
+
+.HP
+clock, rising edge writes data to out
+.TP
+.B flipflop.N.set \fR bit in \fR
+( OR
+.B <newinstname>.set \fR bit in \fR )
+
+.HP
+when true, force out true
+.TP
+.B flipflop.N.reset \fR bit in \fR
+( OR
+.B <newinstname>.reset \fR bit in \fR )
+
+.HP
+when true, force out false; overrides set
+.TP
+.B flipflop.N.out \fR bit io \fR
+( OR
+.B <newinstname>.out \fR bit io \fR )
+
+.HP
+output
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

@@ -1,0 +1,74 @@
+.TH SAMPLE_HOLD "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+sample_hold \- Sample and Hold
+.SH SYNOPSIS
+.HP
+.HP
+sample_hold
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt sample_hold 
+.LP
+.B newinst sample_hold <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBsample_hold.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B sample_hold.N.in \fR s32 in \fR
+( OR
+.B <newinstname>.in \fR s32 in \fR )
+
+.TP
+.B sample_hold.N.hold \fR bit in \fR
+( OR
+.B <newinstname>.hold \fR bit in \fR )
+
+.TP
+.B sample_hold.N.out \fR s32 out \fR
+( OR
+.B <newinstname>.out \fR s32 out \fR )
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

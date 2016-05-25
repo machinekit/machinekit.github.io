@@ -1,0 +1,104 @@
+.TH MULTISWITCH "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+multiswitch \- Switch toggles between a specified number of output bits
+.SH SYNOPSIS
+.HP
+.HP
+multiswitch
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt multiswitch 
+.LP
+.B newinst multiswitch <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBmultiswitch.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B multiswitch.N.up \fR bit in \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.up \fR bit in \fR(default: \fIfalse\fR) )
+
+.HP
+Receives signal to toggle up
+.TP
+.B multiswitch.N.down \fR bit in \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.down \fR bit in \fR(default: \fIfalse\fR) )
+
+.HP
+Receives signal to toggle down
+.TP
+.B multiswitch.N.top-position \fR u32 io \fR
+( OR
+.B <newinstname>.top-position \fR u32 io \fR )
+
+.HP
+Number of positions
+.TP
+.B multiswitch.N.position \fR s32 io \fR
+( OR
+.B <newinstname>.position \fR s32 io \fR )
+
+.HP
+Current state (may be set in the HAL)
+.TP
+.B multiswitch.N.bit-## \fR bit out  (MM=00..pincount) \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.bit-## \fR bit out  (MM=00..pincount) \fR(default: \fIfalse\fR) )
+
+.HP
+Output bits
+.SH INST_PARAMETERS
+.HP
+.HP
+.TP
+.B pincount\fR int \fR(default: \fI6\fR)
+.SH AUTHOR
+.HP
+.HP
+ArcEye arceye@mgware.co.uk / Andy Pugh andy@bodgesoc.org
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL2
+.HP

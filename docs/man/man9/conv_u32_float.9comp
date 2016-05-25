@@ -1,0 +1,36 @@
+.TH CONV_U32_FLOAT "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+conv_u32_float \- Convert a value from u32 to float
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt conv_u32_float [count=\fIN\fB|names=\fIname1\fB[,\fIname2...\fB]]
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBconv-u32-float.\fIN\fB\fR (requires a floating-point thread)
+Update 'out' based on 'in'
+.SH PINS
+.HP
+.HP
+.TP
+.B conv-u32-float.\fIN\fB.in\fR u32 in \fR
+.TQ
+.B conv-u32-float.\fIN\fB.out\fR float out \fR
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

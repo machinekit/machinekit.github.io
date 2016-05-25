@@ -1,0 +1,149 @@
+.TH RESET "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+reset \- Resets a IO signal
+.SH SYNOPSIS
+.HP
+.HP
+reset
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt reset 
+.LP
+.B newinst reset <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Component to reset IO signals.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBreset.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+Update the output value
+.SH PINS
+.HP
+.HP
+.TP
+.B reset.N.trigger \fR bit in \fR
+( OR
+.B <newinstname>.trigger \fR bit in \fR )
+
+.HP
+Trigger input
+.TP
+.B reset.N.out_u32 \fR u32 io \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.out_u32 \fR u32 io \fR(default: \fI0\fR) )
+
+.HP
+Unsigned 32 bit integer output value
+.TP
+.B reset.N.reset_u32 \fR u32 in \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.reset_u32 \fR u32 in \fR(default: \fI0\fR) )
+
+.HP
+Unsigned 32 bit integer reset value
+.TP
+.B reset.N.out_s32 \fR s32 io \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.out_s32 \fR s32 io \fR(default: \fI0\fR) )
+
+.HP
+Signed 32 bit integer output value
+.TP
+.B reset.N.reset_s32 \fR s32 in \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.reset_s32 \fR s32 in \fR(default: \fI0\fR) )
+
+.HP
+Signed 32 bit integer reset value
+.TP
+.B reset.N.out_float \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.out_float \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Float output value
+.TP
+.B reset.N.reset_float \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.reset_float \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Float reset value
+.TP
+.B reset.N.out_bit \fR bit io \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.out_bit \fR bit io \fR(default: \fIfalse\fR) )
+
+.HP
+Bit integer output value
+.TP
+.B reset.N.reset_bit \fR bit in \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.reset_bit \fR bit in \fR(default: \fIfalse\fR) )
+
+.HP
+Bit reset value
+.TP
+.B reset.N.retriggerable \fR bit in \fR(default: \fItrue\fR)
+( OR
+.B <newinstname>.retriggerable \fR bit in \fR(default: \fItrue\fR) )
+
+.HP
+Allow additional edges to reset
+.TP
+.B reset.N.rising \fR bit in \fR(default: \fItrue\fR)
+( OR
+.B <newinstname>.rising \fR bit in \fR(default: \fItrue\fR) )
+
+.HP
+Trigger on rising edge
+.TP
+.B reset.N.falling \fR bit in \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.falling \fR bit in \fR(default: \fIfalse\fR) )
+
+.HP
+Trigger on falling edge
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

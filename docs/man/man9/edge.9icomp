@@ -1,0 +1,113 @@
+.TH EDGE "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+edge \- Edge detector
+.SH SYNOPSIS
+.HP
+.HP
+edge
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt edge 
+.LP
+.B newinst edge <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBedge.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR  )
+.HP
+Produce output pulses from input edges
+.SH PINS
+.HP
+.HP
+.TP
+.B edge.N.in \fR bit in \fR
+( OR
+.B <newinstname>.in \fR bit in \fR )
+
+.TP
+.B edge.N.out \fR bit out \fR
+( OR
+.B <newinstname>.out \fR bit out \fR )
+
+.HP
+Goes high when the desired edge is seen on 'in'
+.TP
+.B edge.N.out_invert \fR bit out \fR
+( OR
+.B <newinstname>.out_invert \fR bit out \fR )
+
+.HP
+Goes low when the desired edge is seen on 'in'
+.TP
+.B edge.N.both \fR bit io \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.both \fR bit io \fR(default: \fIfalse\fR) )
+
+.HP
+If true, selects both edges.  Otherwise, selects one edge according to in-edge
+.TP
+.B edge.N.in_edge \fR bit io \fR(default: \fItrue\fR)
+( OR
+.B <newinstname>.in_edge \fR bit io \fR(default: \fItrue\fR) )
+
+.HP
+If both is false, selects the one desired edge: true means falling, false means rising
+.TP
+.B edge.N.out_width_ns \fR s32 io \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.out_width_ns \fR s32 io \fR(default: \fI0\fR) )
+
+.HP
+Time in nanoseconds of the output pulse
+.TP
+.B edge.N.time_left_ns \fR s32 out \fR
+( OR
+.B <newinstname>.time_left_ns \fR s32 out \fR )
+
+.HP
+Time left in this output pulse
+.TP
+.B edge.N.last_in \fR bit out \fR
+( OR
+.B <newinstname>.last_in \fR bit out \fR )
+
+.HP
+Previous input value
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

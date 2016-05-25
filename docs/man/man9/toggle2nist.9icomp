@@ -1,0 +1,100 @@
+.TH TOGGLE2NIST "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+toggle2nist \- toggle button to nist logic
+.SH SYNOPSIS
+.HP
+.HP
+toggle2nist
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt toggle2nist 
+.LP
+.B newinst toggle2nist <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+toggle2nist can be used with a momentary push button connected to a
+toggle component to control a device that has seperate on and off inputs
+and has an *is-on* output.
+
+in changes states via the toggle output:
+
+    * If is-on is true
+
+    ** then on is false 
+    ** and off is true.
+    
+	
+    * If is-on is false 
+
+    ** then on is true 
+    ** and off is false.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBtoggle2nist.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B toggle2nist.N.in \fR bit in \fR
+( OR
+.B <newinstname>.in \fR bit in \fR )
+
+.TP
+.B toggle2nist.N.is_on \fR bit in \fR
+( OR
+.B <newinstname>.is_on \fR bit in \fR )
+
+.TP
+.B toggle2nist.N.on \fR bit out \fR
+( OR
+.B <newinstname>.on \fR bit out \fR )
+
+.TP
+.B toggle2nist.N.off \fR bit out \fR
+( OR
+.B <newinstname>.off \fR bit out \fR )
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

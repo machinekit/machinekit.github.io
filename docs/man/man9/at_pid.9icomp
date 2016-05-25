@@ -1,0 +1,348 @@
+.TH AT_PID "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+at_pid \- HAL component that provides Proportional     Integeral/Derivative control loops.
+.SH SYNOPSIS
+.HP
+.HP
+at_pid
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt at_pid 
+.LP
+.B newinst at_pid <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+ 
+  This file, 'at_pid.icomp', is a HAL component that provides Proportional/
+  Integeral/Derivative control loops.  It is a realtime component.
+
+  In this documentation, it is assumed that we are discussing position
+  loops.  However this component can be used to implement other loops
+  such as speed loops, torch height control, and others.
+
+  The three most important pins are 'command', 'feedback', and
+  'output'.  For a position loop, 'command' and 'feedback' are
+  in position units.  For a linear axis, this could be inches,
+  mm, metres, or whatever is relavent.  Likewise, for a angular
+  axis, it could be degrees, radians, etc.  The units of the
+  'output' pin represent the change needed to make the feedback
+  match the command.  As such, for a position loop 'Output' is
+  a velocity, in inches/sec, mm/sec, degrees/sec, etc.
+
+  Each loop has several other pins as well.  'error' is equal to
+  'command' minus 'feedback'.  'enable' is a bit that enables
+  the loop.  If 'enable' is false, all integrators are reset,
+  and the output is forced to zero.  If 'enable' is true, the
+  loop operates normally.
+
+  The PID gains, limits, and other 'tunable' features of the
+  loop are implemented as parameters.  These are as follows:
+
+  Pgain        Proportional gain
+  Igain        Integral gain
+  Dgain        Derivative gain
+  bias         Constant offset on output
+  FF0          Zeroth order Feedforward gain
+  FF1          First order Feedforward gain
+  FF2          Second order Feedforward gain
+  deadband     Amount of error that will be ignored
+  maxerror     Limit on error
+  maxerrorI    Limit on error integrator
+  maxerrorD    Limit on error differentiator
+  maxcmdD      Limit on command differentiator
+  maxcmdDD     Limit on command 2nd derivative
+  maxoutput    Limit on output value
+
+  All of the limits (max____) are implemented such that if the
+  parameter value is zero, there is no limit.
+
+  A number of internal values which may be usefull for testing
+  and tuning are also available as parameters.  To avoid cluttering
+  the parameter list, these are only exported if "debug=1" is
+  specified on the insmod command line.
+
+  errorI       Integral of error
+  errorD       Derivative of error
+  cmdD     Derivative of the command
+  cmdDd    2nd derivative of the command
+
+  The PID loop calculations are as follows (see the code for
+  all the nitty gritty details):
+
+  error = command - feedback
+  if ( fabs(error) < deadband ) then error = 0
+  limit error to +/- maxerror
+  errorI += error * period
+  limit errorI to +/- maxerrorI
+  errorD = (error - previouserror) / period
+  limit errorD to +/- paxerrorD
+  cmdD = (command - previouscommand) / period
+  limit cmdD to +/- maxcmdD
+  cmdDd = (cmdD - previouscmdD) / period
+  limit cmdDd to +/- maxcmdDD
+  output = bias + error * Pgain + errorI * Igain +
+           errorD * Dgain + command * FF0 + cmdD * FF1 +
+           cmdDd * FF2
+  limit output to +/- maxoutput
+
+  This component exports one function called '<name>.do-pid-calcs'
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBat_pid.N.do_pid_calcs.funct\fR 
+( OR
+\fB<newinstname>.do_pid_calcs.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B at_pid.N.deadband \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.deadband \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Amount of error that will be ignored
+.TP
+.B at_pid.N.maxerror \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.maxerror \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Limit on error
+.TP
+.B at_pid.N.maxerrorI \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.maxerrorI \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Limit on error integrator
+.TP
+.B at_pid.N.maxerrorD \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.maxerrorD \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Limit on error differentiator
+.TP
+.B at_pid.N.maxcmdD \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.maxcmdD \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Limit on command differentiator
+.TP
+.B at_pid.N.maxcmdDD \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.maxcmdDD \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Limit on command 2nd derivative
+.TP
+.B at_pid.N.bias \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.bias \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Constant offset on output
+.TP
+.B at_pid.N.Pgain \fR float io \fR(default: \fI1.0\fR)
+( OR
+.B <newinstname>.Pgain \fR float io \fR(default: \fI1.0\fR) )
+
+.HP
+Proportional gain
+.TP
+.B at_pid.N.Igain \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.Igain \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Integral gain
+.TP
+.B at_pid.N.Dgain \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.Dgain \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Derivative gain
+.TP
+.B at_pid.N.FF0 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.FF0 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Zeroth order Feedfoioard gain
+.TP
+.B at_pid.N.FF1 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.FF1 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+First order Feedforward gain
+.TP
+.B at_pid.N.FF2 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.FF2 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Second order Feedforward gain
+.TP
+.B at_pid.N.maxoutput \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.maxoutput \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+Limit on output value
+.TP
+.B at_pid.N.tuneEffort \fR float io \fR(default: \fI0.5\fR)
+( OR
+.B <newinstname>.tuneEffort \fR float io \fR(default: \fI0.5\fR) )
+
+.HP
+ Control effort for limit cycle.
+.TP
+.B at_pid.N.tuneCycles \fR u32 io \fR(default: \fI50\fR)
+( OR
+.B <newinstname>.tuneCycles \fR u32 io \fR(default: \fI50\fR) )
+
+.TP
+.B at_pid.N.tuneType \fR u32 io \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.tuneType \fR u32 io \fR(default: \fI0\fR) )
+
+.TP
+.B at_pid.N.errorI \fR float out \fR
+( OR
+.B <newinstname>.errorI \fR float out \fR )
+
+.HP
+Integral of error
+.TP
+.B at_pid.N.errorD \fR float out \fR
+( OR
+.B <newinstname>.errorD \fR float out \fR )
+
+.HP
+Derivative of error
+.TP
+.B at_pid.N.commandD \fR float out \fR
+( OR
+.B <newinstname>.commandD \fR float out \fR )
+
+.HP
+Derivative of the command
+.TP
+.B at_pid.N.commandDD \fR float out \fR
+( OR
+.B <newinstname>.commandDD \fR float out \fR )
+
+.HP
+2nd derivative of the command
+.TP
+.B at_pid.N.ultimateGain \fR float out \fR
+( OR
+.B <newinstname>.ultimateGain \fR float out \fR )
+
+.HP
+Calc by auto-tune from limit cycle.
+.TP
+.B at_pid.N.ultimatePeriod \fR float io \fR
+( OR
+.B <newinstname>.ultimatePeriod \fR float io \fR )
+
+.HP
+Calc by auto-tune from limit cycle.
+.TP
+.B at_pid.N.enable \fR bit in \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.enable \fR bit in \fR(default: \fI0\fR) )
+
+.HP
+Enable/disabled the PID loop
+.TP
+.B at_pid.N.command \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.command \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Commanded value
+.TP
+.B at_pid.N.feedback \fR float in \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.feedback \fR float in \fR(default: \fI0.0\fR) )
+
+.HP
+Feedback input
+.TP
+.B at_pid.N.error \fR float out \fR
+( OR
+.B <newinstname>.error \fR float out \fR )
+
+.HP
+Current error
+.TP
+.B at_pid.N.output \fR float out \fR
+( OR
+.B <newinstname>.output \fR float out \fR )
+
+.HP
+Ouput value
+.TP
+.B at_pid.N.tuneMode \fR bit in \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.tuneMode \fR bit in \fR(default: \fI0\fR) )
+
+.HP
+0=PID, 1=tune.
+.TP
+.B at_pid.N.tuneStart \fR bit io \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.tuneStart \fR bit io \fR(default: \fI0\fR) )
+
+.HP
+Set to 1 to start an auto-tune cycle.                         Clears automatically when the cycle has finished.
+.SH AUTHOR
+.HP
+.HP
+John Kasunich
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL v2
+.HP

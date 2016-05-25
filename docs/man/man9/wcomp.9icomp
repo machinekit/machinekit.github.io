@@ -1,0 +1,106 @@
+.TH WCOMP "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+wcomp \- Window comparator
+.SH SYNOPSIS
+.HP
+.HP
+wcomp
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt wcomp 
+.LP
+.B newinst wcomp <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBwcomp.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B wcomp.N.in \fR float in \fR
+( OR
+.B <newinstname>.in \fR float in \fR )
+
+.HP
+Value being compared
+.TP
+.B wcomp.N.min_ \fR float in \fR
+( OR
+.B <newinstname>.min_ \fR float in \fR )
+
+.HP
+Low boundary for comparison
+.TP
+.B wcomp.N.max_ \fR float in \fR
+( OR
+.B <newinstname>.max_ \fR float in \fR )
+
+.HP
+High boundary for comparison
+.TP
+.B wcomp.N.out \fR bit out \fR
+( OR
+.B <newinstname>.out \fR bit out \fR )
+
+.HP
+True if *in* is strictly between *min* and *max*
+.TP
+.B wcomp.N.under \fR bit out \fR
+( OR
+.B <newinstname>.under \fR bit out \fR )
+
+.HP
+True if *in* is less than or equal to *min*
+.TP
+.B wcomp.N.over \fR bit out \fR
+( OR
+.B <newinstname>.over \fR bit out \fR )
+
+.HP
+True if *in* is greater than or equal to *max*
+.SH NOTES
+.HP
+.HP
+If *max* <= *min* then the behavior is undefined.
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

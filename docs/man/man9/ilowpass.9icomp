@@ -1,0 +1,120 @@
+.TH ILOWPASS "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+ilowpass \- Low-pass filter with integer inputs and outputs
+.SH SYNOPSIS
+.HP
+.HP
+ilowpass
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt ilowpass 
+.LP
+.B newinst ilowpass <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+While it may find other applications, this component was written
+to create smoother motion while jogging with an MPG.
+
+In a machine with high acceleration, a short jog can behave almost like a step
+function.  By putting the *ilowpass* component between the MPG
+encoder *counts* output and the axis *jog-counts* input,
+this can be smoothed.
+
+Choose *scale* conservatively so that during a single session
+there will never be more than about 2e9/*scale* pulses seen
+on the MPG.  Choose *gain* according to the smoothing level
+desired.  Divide the *axis.N.jog-scale* values by
+*scale*.
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBilowpass.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+Update the output based on the input and parameters
+.SH PINS
+.HP
+.HP
+.TP
+.B ilowpass.N.in \fR s32 in \fR
+( OR
+.B <newinstname>.in \fR s32 in \fR )
+
+.TP
+.B ilowpass.N.out \fR s32 out \fR
+( OR
+.B <newinstname>.out \fR s32 out \fR )
+
+.HP
+
+*out* tracks *in* **scale* through a low-pass
+filter of *gain* per period.
+
+.TP
+.B ilowpass.N.scale \fR float io \fR(default: \fI1024.0\fR)
+( OR
+.B <newinstname>.scale \fR float io \fR(default: \fI1024.0\fR) )
+
+.HP
+
+A scale factor applied to the output
+value of the low-pass filter.
+
+.TP
+.B ilowpass.N.gain \fR float io \fR(default: \fI0.5\fR)
+( OR
+.B <newinstname>.gain \fR float io \fR(default: \fI0.5\fR) )
+
+.HP
+
+Together with the period, sets the rate at
+which the output changes.  Useful range is between 0 and 1, with higher
+values causing the input value to be tracked more quickly.  For
+instance, a setting of 0.9 causes the output value to go 90% of the way
+towards the input value in each period
+
+.SH AUTHOR
+.HP
+.HP
+Jeff Epler <jepler@unpythonic.net>
+.HP
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

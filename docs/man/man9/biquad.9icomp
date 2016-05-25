@@ -1,0 +1,171 @@
+.TH BIQUAD "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.SH INSTANTIABLE COMPONENTS
+.HP
+.HP
+.B All instantiable components can be loaded in two manners
+
+.LP
+.B Using loadrt with or without count= | names= parameters as per legacy components
+
+.LP
+.B Using newinst, which names the instance and allows further parameters and arguments,
+
+.LP
+.B primarily pincount= which can set the number of pins created for that instance (where applicable)
+
+.HP
+.RE
+.SH NAME
+.HP
+.HP
+biquad \- Biquad IIR filter
+.SH SYNOPSIS
+.HP
+.HP
+biquad
+.SH USAGE SYNOPSIS
+.HP
+.HP
+.B loadrt biquad 
+.LP
+.B newinst biquad <newinstname> [ pincount=\fIN\fB | iprefix=\fIprefix\fB ]
+.B                             [instanceparamX=\fIX\fB | argX=\fIX\fB ]
+.HP
+( args in [ ] denote possible args and parameters, may not be used in all components )
+.HP
+
+.SH DESCRIPTION
+.HP
+.HP
+
+Biquad IIR filter. Implements the following transfer function:
+H(z) = (n0 + n1z-1 + n2z-2) / (1+ d1z-1 + d2z-2)
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBbiquad.N.funct\fR 
+( OR
+\fB<newinstname>.funct\fR (requires a floating-point thread) )
+.HP
+
+.SH PINS
+.HP
+.HP
+.TP
+.B biquad.N.in \fR float in \fR
+( OR
+.B <newinstname>.in \fR float in \fR )
+
+.HP
+Filter input.
+.TP
+.B biquad.N.out \fR float out \fR
+( OR
+.B <newinstname>.out \fR float out \fR )
+
+.HP
+Filter output.
+.TP
+.B biquad.N.enable \fR bit in \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.enable \fR bit in \fR(default: \fIfalse\fR) )
+
+.HP
+
+Filter enable. 
+When false, the in is passed to out without any filtering. 
+A transition from false to true causes filter 
+coefficients to be calculated according to parameters
+
+.TP
+.B biquad.N.valid \fR bit out \fR(default: \fIfalse\fR)
+( OR
+.B <newinstname>.valid \fR bit out \fR(default: \fIfalse\fR) )
+
+.HP
+
+When false, indicates an error occured when caclulating filter coefficients.
+
+.TP
+.B biquad.N.type_ \fR u32 io \fR(default: \fI0\fR)
+( OR
+.B <newinstname>.type_ \fR u32 io \fR(default: \fI0\fR) )
+
+.HP
+
+Filter type determines the type of filter coefficients calculated. 
+When 0, coefficients must be loaded directly. 
+When 1, a low pass filter is created. When 2, a notch filter is created.
+
+.TP
+.B biquad.N.f0 \fR float io \fR(default: \fI250.0\fR)
+( OR
+.B <newinstname>.f0 \fR float io \fR(default: \fI250.0\fR) )
+
+.HP
+The corner frequency of the filter.
+.TP
+.B biquad.N.Q \fR float io \fR(default: \fI0.7071\fR)
+( OR
+.B <newinstname>.Q \fR float io \fR(default: \fI0.7071\fR) )
+
+.HP
+The Q of the filter.
+.TP
+.B biquad.N.d1 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.d1 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+1st-delayed denominator coef
+.TP
+.B biquad.N.d2 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.d2 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+2nd-delayed denominator coef
+.TP
+.B biquad.N.n0 \fR float io \fR(default: \fI1.0\fR)
+( OR
+.B <newinstname>.n0 \fR float io \fR(default: \fI1.0\fR) )
+
+.HP
+non-delayed numerator coef
+.TP
+.B biquad.N.n1 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.n1 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+1st-delayed numerator coef
+.TP
+.B biquad.N.n2 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.n2 \fR float io \fR(default: \fI0.0\fR) )
+
+.HP
+2nd-delayed numerator coef
+.TP
+.B biquad.N.s1 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.s1 \fR float io \fR(default: \fI0.0\fR) )
+
+.TP
+.B biquad.N.s2 \fR float io \fR(default: \fI0.0\fR)
+( OR
+.B <newinstname>.s2 \fR float io \fR(default: \fI0.0\fR) )
+
+.SH LICENCE
+.HP
+.HP
+GPL
+.HP

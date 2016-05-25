@@ -1,0 +1,56 @@
+.TH RINGREAD "9" "2016-07-09" "Machinekit Documentation" "HAL Component"
+.de TQ
+.br
+.ns
+.TP \\$1
+..
+
+.RE
+.SH NAME
+.HP
+.HP
+ringread \- demonstrate ring read operations
+.SH SYNOPSIS
+.HP
+.HP
+.HP
+.B loadrt ringread
+.SH DESCRIPTION
+.HP
+.HP
+
+Demonstartion of ringread operations
+
+Will output
+    
+    Number of underruns
+    Number of successful reads
+    Number of times writer outstripped the reader
+
+.SH FUNCTIONS
+.HP
+.HP
+.TP
+\fBringread\fR (requires a floating-point thread)
+
+.SH PINS
+.HP
+.HP
+.TP
+.B ringread.underrun\fR u32 out \fR
+number of failed read attempts
+.TP
+.B ringread.received\fR u32 out \fR
+number of successful read attempts
+.TP
+.B ringread.tooslow\fR u32 out \fR
+number of times the reader couldnt keep up with the writer
+.TP
+.B ringread.circular\fR bit in \fR
+circular flag - set to nonzero to enable circular record buffer
+.HP
+.SH LICENCE
+.HP
+.HP
+GPLv2 or later
+.HP

@@ -1,1184 +1,2937 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000001/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000002/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000003/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000004/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000005/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000006/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000007/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000008/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000009/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/000010/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/APT-packages-jessie/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/APT-packages-raspbian/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/APT-packages-wheezy/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/AX5214H/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/setting-up/CAN-developing-setup/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/CAN-developing/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/code/Code_Notes/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/install/ConfigurationChanges/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/code/Contributing-to-Machinekit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/code/Debugging-RT-components/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/GM/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/GPLD_Copyright/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/GS2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/Getting_Machinekit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/Glossary/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/Integrator_Concepts/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/install/Latency_Test/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/Linux_FAQ/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/code/NML_Messages/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/PM_ROTATION_VECTOR/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/Stepper_Diagnostics/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/code/Style_Guide/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/System_Requirements/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/UnifiedBuild/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/Updating_Machinekit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/User_Concepts/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/VFS11/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/site/about-this-site/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/abs/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/abs_s32/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/adxl345/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/and2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/andn/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/documenting/asciidoc-markup/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/at_pid/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/axis-machinekit-enhancements/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/axis-remote/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/axis/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/axis/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/basic_hal/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/bin2gray/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/biquad/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/bitslice/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/bitwise/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/bldc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/bldc_hall3/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/blend/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/building-rt-preempt-kernel/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//community/c4/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/canonical-devices/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//community/channels/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/charge_pump/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/clarke2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/clarke3/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/clarkeinv/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/ladder/classic_ladder/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/classicladder/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/comp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/comp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/comp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/components/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/constant/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/documenting/contributing-documentation/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//community/contributing/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_bit_s32/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_bit_u32/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_float_s32/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_float_u32/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_s32_bit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_s32_float/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_s32_u32/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_u32_bit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_u32_float/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/conv_u32_s32/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/coordinates/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/config/copy_and_run/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/counter/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/ddt/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/deadzone/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/debounce/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/delayline/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/develop-index/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/setting-up/developing-setting-up/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/developing/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/documenting/diagram-examples/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/div2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/edge/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/emc-history/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/config/emc2hal/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/encoder/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/encoder_ratio/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/estop_latch/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/fdm/fdm-gcode/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/fdm/fdm-hal/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/fdm/fdm-ini/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/feedcomp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/flipflop/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/gantry/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/gantrykins/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/gcode/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/examples/gcode/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/gearchange/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/general_ref/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-help/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/getting-started-platform/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/gladevcp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/gladevcp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/gladevcp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/gmoccapy/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/gray2bin/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/gs2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/examples/gs2_example/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/source-highlight/hal-demo/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/hal-examples/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/hal-instantiation/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_add_funct_to_thread/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/hal_arm335xQEP/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_create_thread/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_exit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_export_funct/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_init/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/hal_input/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_malloc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_param_new/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_parport/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_pin_new/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/hal_pru_generic/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_ready/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_set_lock/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_signal_new/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_start_threads/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hal_type_t/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/halcmd/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/halmeter/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/halmodule/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/halrun/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/halsampler/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/halshow/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/halstreamer/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/haltcl/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/haltcl/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/halui/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/halui/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/halui_examples/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/hbridge/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/documenting/highlight/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/hm2_7i43/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_allocate_bspi_tram/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_bspi_set_read_function/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_bspi_set_write_function/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_bspi_setup_chan/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_bspi_write_chan/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/hm2_pci/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_pktuart_read/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_pktuart_send/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_pktuart_setup/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_tram_add_bspi_frame/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_uart_read/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_uart_send/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/hm2_uart_setup/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//community/home/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/hostmot2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/hostmot2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/hypot/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/idb/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/ilowpass/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/image-to-gcode/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/index-HAL/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/index-developer/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/index-documenting/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/index-fdm/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/index-getting-started/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/index-integrator/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/index-user/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/sandbox/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//about/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/source-highlight/ini-demo/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/config/ini_config/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/config/ini_homing/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/install-rt-kernel-RPi2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/install-rt-kernel-amd64/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/install-rt-kernel-arm7/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/install-rt-kernel-i386/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/install-runtime-packages/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/installing-packages/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/instcomp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/integ/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/intro/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/intro_hal/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/intro_rtapi/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/invert/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/io_muxn/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/iocontrol/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/joyhandle/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/keystick/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/motion/kinematics/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/kins/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/knob2float/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/ladder/ladder_examples/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/ladder/ladder_intro/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/latencybins/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/lathe/lathe-user/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/config/lathe_config/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/lcd/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/led_dim/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/lgantry/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/limit1/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/limit2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/limit3/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/lincurve/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/setting-up/lineardelta-FDM-printer/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/lineardeltakins/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/linuxcnc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/linuxcncrsh/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/logic/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/lowpass/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/lut5/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/lutn/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/m-code/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/setting-up/machine-setting-up-examples/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/machinekit-developing/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/getting-started/machinekit-images/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/machinekit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/machining_center/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//community/maintainers/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/maj3/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/match8/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/matrix_kb/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/mesa_pktgyro_test/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/message/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/mini/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/minmax/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/motenc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/motion/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/examples/mpg/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/mult2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/multiclick/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/multiswitch/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/mux16/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/mux2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/mux4/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/mux8/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/mux_generic/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/muxn/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/muxn_u32/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/near/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/neg/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/new-instantiated-components/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/source-highlight/ngc-demo/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/ngcgui/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/not/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/o-code/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/offset/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/offsetn/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/oneshot/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/opto22/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/opto_ac5/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/or2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/orient/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/orn/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/other-code/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/out_to_io/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/overleaf/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/overview/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/parallel_port/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/examples/pci_parallel_port/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/pico_ppmc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/pid/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/motion/pid_theory/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/documenting/plugins/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/pluto_p/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/config/pncconf/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/source-highlight/proto-demo/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/machinetalk/protobuf/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/pwmgen/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/python-interface/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/pyvcp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/pyvcp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/pyvcp_examples/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/qtquickvcp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/remote/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/infra/repositories/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/reset/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/ringread/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/ringwrite/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/rs274ngc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/rt-kernel-config/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_app_exit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_app_main/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_clock_set_period/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_delay/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_div_u64/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_exit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_get_time/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_init/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_module_param/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_mutex/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_outb/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_print/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_prio/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_region/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_set_msg_level/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_shmem/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_snprintf/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_task_new/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_task_pause/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_task_start/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/rtapi_task_wait/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/rtcomps/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/rtfault/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/rtfaults/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/rtmon/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/safety_latch/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sample_hold/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sampler/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/scale/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/select8/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/selectn/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/selector/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/servo_to_go/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/setsserial/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/shuttlexpress/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/drivers/shuttlexpress/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/siggen/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sim_axis_hardware/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sim_encoder/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sim_parport/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sim_spindle/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sphereprobe/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/examples/spindle/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sserial/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/starting-emc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/stats/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/config/stepconf/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/stepgen/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/config/stepper/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/quickstart/stepper_quickstart/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/steptest/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/streamer/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/remap/structure/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/sum2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/supply/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/thc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/thcud/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/threads/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/threadtest/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/time/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/timedelay/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/timedelta/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/tklinuxcnc/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/toggle/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/toggle2nist/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gcode/tool_compensation/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/toolchangers/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/tooledit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/tools/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/gui/touchy/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/tristate_bit/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/tristate_float/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/hal/tutorial/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/motion/tweaking_steppers/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/undocumented_hal/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man3/undocumented_rtapi/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/documenting/updating-your-fork/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/updown/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/user_intro/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/common/userforeword/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/vfdb_vfd/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man1/vfs11_vfd/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/watchdog/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/wcomp/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/wcompn/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/weighted_sum/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/developing/writing-components/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/xhc_hb04_util/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//docs/man/man9/xor2/</loc>
-</url>
-<url>
-<loc>http://www.machinekit.io//googlefe8e1e0739168a82.html</loc>
-<lastmod>2016-07-24T22:43:39+00:00</lastmod>
-</url>
-<url>
-<loc>http://www.machinekit.io//search-result.html</loc>
-<lastmod>2016-07-24T22:43:39+00:00</lastmod>
-</url>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                      http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+ <url>
+  <loc>http://www.machinekit.io/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/about/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/community/c4</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/community/channels</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/community/contributing</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/community/home</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/community/maintainers</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/css/screen.css</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/CAN-developing-setup</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/code/CMS_buffer.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/code/Code_Notes</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/code/Machinekit-block-diagram-small.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/code/Machinekit-motion-controller-small.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/code/NML_Messages</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/code/Style_Guide</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/code/emc2-motion-joint-controller-block-diag.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/GPLD_Copyright</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/Glossary</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/Integrator_Concepts</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/Linux_FAQ</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/Stepper_Diagnostics</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/System_Requirements</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/UnifiedBuild</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/User_Concepts</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/axis-2.5.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/axis-gladevcp.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/axis-pyvcp.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/configuration-selector.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/keystick.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/lathe-diagram.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/mill-diagram.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/mini.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/naive-cam.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/ngcgui.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/pid-feedback.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/servo-feedback.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/tkemc.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/touchy.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/images/whatstep1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/python-interface</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/starting-emc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/common/user_intro</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/copy_and_run</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/emc2hal</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/calibration-1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/calibration-2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/calibration-3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/configuration-selector.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/emc2-motion-homing-diag.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/encoder-counts-math.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/encoder-scale.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/ff2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/i-term.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/latency.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/output-offset.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/p-term.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-advanced.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-axis-config.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-axis-drive.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-basic.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-diagram-lathe.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-external.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-gui.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-hal.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-mesa-config.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-mesa-io2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-mesa-io3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-mesa-io4.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-parport.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-scale-calc.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-spindle-config.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/pncconf-splash.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/scale-math.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepconf-advanced.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepconf-axis.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepconf-basic.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepconf-config.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepconf-parport2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepconf-pinout.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepconf-spindle.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepconf-test.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/stepper-scale.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/switch-nc-series.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/images/switch-no-parallel.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/ini_config</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/ini_homing</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/lathe_config</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/pncconf</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/stepconf</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/config/stepper</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/CAN-developing</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/building-rt-preempt-kernel</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/develop-index/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/developing</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/images/qtc_build_settings.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/images/qtc_qml_emulation.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/machinekit-developing</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/qtquickvcp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/rt-kernel-config</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/rtfaults</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/toolchangers</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/developing/writing-components</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/contributing-documentation</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/actdiag_example.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/blockdiag_example.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/ditaa-test.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/graphviz_example.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/mermaid_flowchart_example.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/mermaid_seqdiag_example.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/nwdiag_example.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_activitydiagram_example.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_classdiagram_example.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_componentdiagram_example.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_deploymentdiagram_example1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_deploymentdiagram_example2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_saltdiagram_example.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_sequencediagram_example.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_statediagram_example.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/plantuml_usecasediagram_example.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/seqdiag_example.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/shaape-example5.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/diagram-examples/wavedrom-demo.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/highlight</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/compare-for-PR.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/create-PR-to-original.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/edit-me-new-branch.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/merge-PR-message.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/merge-and-update-fork.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/merge-message-fork-update.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/merged-PR-and-updated-fork.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/notice-fork-behind-master.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/switch-base.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/images/switched-base-with-PR.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/plugins</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/documenting/updating-your-fork</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/AX5214H</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/GM</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/GS2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/VFS11</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/hostmot2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/5i20-halpins.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/GM_AXISpinout.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/GM_AxisInterface.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/GM_ENDSWpinout.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/GM_IOpinout.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/GM_PCIpinout.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/GM_RS485topology.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/GM_RefSignals.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/GMsystem.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/pico-ppmc-math.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/pluto-pinout.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/pluto-step-pinout.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/images/pluto_step_waveform.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/motenc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/opto22</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/pico_ppmc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/pluto_p</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/servo_to_go</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/drivers/shuttlexpress</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/examples/gcode</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/examples/gs2_example</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/examples/images/spindle-math.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/examples/mpg</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/examples/pci_parallel_port</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/examples/spindle</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/fdm/fdm-gcode</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/fdm/fdm-gcode/remap.ini</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/fdm/fdm-hal</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/fdm/fdm-ini</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/coordinates</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/gcode</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/G81.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/G81a.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/G81ex1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/G81ex2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/G81mult.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/ToolTable-TouchOff.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/comp-path.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/comp02.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/eight.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/g2-3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/g2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/g76-01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/g76-threads.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/inside-comp.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/nurbs01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/offsets.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/outside-comp.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/polar01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/polar02.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/images/twelve.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/m-code</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/machining_center</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/o-code</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/other-code</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/overview</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/rs274ngc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gcode/tool_compensation</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-help</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/APT-packages-jessie</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/APT-packages-raspbian</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/APT-packages-wheezy</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/getting-started-platform</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/install-rt-kernel-RPi2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/install-rt-kernel-amd64</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/install-rt-kernel-arm7</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/install-rt-kernel-i386</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/install-runtime-packages</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/installing-packages</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/getting-started/machinekit-images</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/axis</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/axis-machinekit-enhancements</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/gladevcp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/gmoccapy</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/halui</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/image-to-gcode</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/Hal_Dial.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/JogWheel.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/SpeedControl.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-2.5.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-currentandselected.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-emc-status.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-homed.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-lathe-tool.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-limit.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-machineorigin.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-mdi.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/axis-outofrange.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/button.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/checkbutton.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/combi_dro.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/emc-actions.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/example-panel-small.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/example-tabbed-small.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/glade-manual-small.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_0_9_7_sim_hardware_button.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_0_9_7_tool_info.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_3_axis.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_4_axis.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_back_tool_lathe.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_file_selection_dialog_with_keyboard.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_getting_macro_info.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_lathe.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_mdi_hidden_keyboard.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_ntb_preview.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_ntb_preview_maximized_2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_ntb_user_tab.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_plasma_1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_settings_advanced.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_settings_appearance.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_settings_button.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_settings_hardware.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_with_left_box_in_edit_mode.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gmoccapy_with_right_panel_in_MDI_mode.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gremlin.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/gtk-tooledit.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/hal-pin-change-66.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/hal_hbar.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/hal_meter.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/hal_sourceview.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/holes.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/hscale.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/i2g-roughing.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/iconview.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/image-to-gcode.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/keystick.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/leds.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/manual-tool-change.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/mini01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/mini02.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/miniauto.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/minibkplot.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/miniedit.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/miniman.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/minioffsets.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/minitool.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/ngcgui-db25-1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/ngcgui-db25-2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/ngcgui-db25-3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/ngcgui.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/offsetpage.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/oword.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/progressbar2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/radiobutton.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/sketch_auto_tool_measurement.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/small-screenshot.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/speed.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/spinbutton.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/strange_numbers.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tkemc-interp.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tkemc-mdi.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tkemc-override-limits.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tkemc.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_axis_p.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_axis_x.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_axis_y.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_axis_z.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_axis_z2.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_blockdelete.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_clear.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_estop.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_open.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_optpause.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_pause.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_power.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_reload.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_rotate.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_run.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_step.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_stop.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_zoomin.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/tool_zoomout.gif</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/touchoff.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/touchy-tab-33.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/touchy.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/vscale.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/images/whoareyou.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/keystick</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/mini</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/ngcgui</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/selector</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/tklinuxcnc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/gui/touchy</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/basic_hal</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/canonical-devices</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/comp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/components</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/general_ref</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/hal-examples</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/halmodule</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/halshow</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/haltcl</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/halui_examples</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/HAL_Configuration.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/encoder-block-diag.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/gs2_panel.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/hal-meter01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/hal-meter02.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halmeter-1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halmeter-select.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-02.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-03.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-04.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-05.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-06.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-07.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-08.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-09.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-10.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halscope-11.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halshow-1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halshow-2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halshow-3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/halshow-4.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/images/pyvcp_image01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/images/pyvcp_image02.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/images/pyvcp_image_u32_01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/parport-block-diag.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pid-block-diag.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/ptest-final.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/ptest.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_axis_lathe.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_bar.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_borders.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_button.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_checkbutton.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_dial.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_group.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_hbox.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_jogwheel.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_label.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_labelframe.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_led.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_meter.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_mypanel.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_number.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_radiobutton.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_rectled.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_s32.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_scale.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_spinbox.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_table.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_tabs1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_tabs2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_tabs3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/pyvcp_vbox.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/remote-start.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/signal-direction.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/softstart-scope.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/stepgen-block-diag.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/stepgen-type0.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/stepgen-type11-14.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/stepgen-type2-4.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/stepgen-type5-10.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/velocity-01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/xyz_ACO.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/images/xyz_buttons.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/instcomp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/intro</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/new-instantiated-components</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/parallel_port</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/pyvcp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/pyvcp_examples</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/rtcomps</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/tools</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/hal/tutorial</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/index-HAL</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/index-developer</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/index-documenting</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/index-fdm</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/index-getting-started</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/index-integrator</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/index-user</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/infra/repositories/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/infra/repositories/mk_manpage_flow.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/infra/repositories/mk_merge_flow.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/infra/repositories/mk_pr_flow.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/infra/repositories/mkdocs_merge_flow.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/infra/repositories/mkdocs_pr_flow.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/infra/repositories/mksocfpga_merge_flow.svg</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/install/ConfigurationChanges</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/install/Latency_Test</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/classic_ladder</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/AssignCompare-Ladder.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Assignment_Expression.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Bit_Status.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Comparison_Expression.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Config-com.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Config-io.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Config.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Default_Section_Display.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Default_Sections_Manager.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Default_Symbols_names.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/EStop_Section_Display.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Editor.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Editor_NO_Input.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/SaveAs.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Section_Display_Build01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Section_Display_Build02.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Section_Display_Build03.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Section_Display_Grid.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Selector%20arrow%20,%20Eraser%20Ordinary%20step%20,%20Initial%20(Starting)%20stepTransition%20,%20Step%20and%20Transition%20Transition%20Link-Downside%20,%20TransitionLink-Upside%20Pass-through%20Link-Downside%20,%20Pass-through%20Link-Upside%20JumpLink%20Comment%20Box</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/Tmr_Section_Display.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/axis_cl-estop.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/example_link_contact_coil.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/example_link_contact_coil2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/example_link_contact_coil3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/extra-pulse-reject.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/images/ladder_action_load.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/images/ladder_action_loadbar.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/images/ladder_action_out.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/stepconf_ladder.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/watch_window.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/images/wrapping-counter.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/ladder_examples</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/ladder/ladder_intro</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/control_point.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/radius_1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/radius_2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/radius_3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/radius_4.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/ramp_cut.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/ramp_entry.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_pos_1.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_pos_2.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_pos_3.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_pos_4.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_pos_5.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_pos_6.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_pos_7.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_pos_8.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/images/tool_positions.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/lathe/lathe-user</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/axis</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/axis-remote</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/comp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/gladevcp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/gladevcp.1</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/gs2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/hal_input</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/halcmd</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/halmeter</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/halrun</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/halsampler</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/halstreamer</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/haltcl</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/halui</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/iocontrol</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/linuxcnc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/linuxcncrsh</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/machinekit</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/pyvcp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/shuttlexpress</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/vfdb_vfd</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man1/vfs11_vfd</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/PM_ROTATION_VECTOR</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_add_funct_to_thread</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_create_thread</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_exit</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_export_funct</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_init</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_malloc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_param_new</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_parport</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_pin_new</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_ready</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_set_constructor</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_set_lock</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_signal_new</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_start_threads</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hal_type_t</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_allocate_bspi_tram</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_bspi_set_read_function</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_bspi_set_write_function</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_bspi_setup_chan</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_bspi_write_chan</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_pktuart_read</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_pktuart_send</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_pktuart_setup</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_tram_add_bspi_frame</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_uart_read</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_uart_send</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/hm2_uart_setup</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/intro_hal</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/intro_rtapi</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_app_exit</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_app_main</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_clock_set_period</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_delay</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_div_u64</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_exit</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_get_time</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_init</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_module_param</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_mutex</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_outb</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_print</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_prio</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_region</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_set_msg_level</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_shmem</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_snprintf</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_task_new</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_task_pause</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_task_start</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/rtapi_task_wait</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/undocumented_hal</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man3/undocumented_rtapi</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/abs</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/abs_s32</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/adxl345</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/and2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/andn</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/at_pid</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/bin2gray</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/biquad</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/bitslice</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/bitwise</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/bldc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/bldc_hall3</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/blend</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/charge_pump</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/clarke2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/clarke3</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/clarkeinv</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/classicladder</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/comp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/constant</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_bit_s32</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_bit_u32</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_float_s32</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_float_u32</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_s32_bit</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_s32_float</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_s32_u32</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_u32_bit</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_u32_float</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/conv_u32_s32</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/counter</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/ddt</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/deadzone</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/debounce</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/delayline</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/div2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/edge</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/encoder</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/encoder_ratio</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/estop_latch</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/feedcomp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/flipflop</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/gantry</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/gantrykins</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/gearchange</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/gladevcp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/gray2bin</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/hal_pru_generic</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/hbridge</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/hm2_7i43</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/hm2_pci</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/hostmot2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/hypot</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/idb</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/ilowpass</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/index.html</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/integ</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/invert</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/io_muxn</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/joyhandle</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/kins</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/knob2float</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/latencybins</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/lcd</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/led_dim</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/lgantry</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/limit1</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/limit2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/limit3</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/lincurve</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/lineardeltakins</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/logic</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/lowpass</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/lut5</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/lutn</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/maj3</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/match8</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/matrix_kb</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/mesa_pktgyro_test</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/message</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/minmax</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/motion</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/mult2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/multiclick</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/multiswitch</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/mux16</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/mux2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/mux4</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/mux8</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/mux_generic</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/muxn</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/muxn_u32</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/near</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/neg</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/not</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/offset</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/offsetn</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/oneshot</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/opto_ac5</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/or2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/orient</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/orn</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/out_to_io</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/pid</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/pwmgen</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/remote</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/reset</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/ringread</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/ringwrite</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/rtfault</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/rtmon</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/safety_latch</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sample_hold</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sampler</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/scale</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/select8</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/selectn</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/setsserial</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/siggen</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sim_axis_hardware</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sim_encoder</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sim_parport</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sim_spindle</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sphereprobe</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sserial</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/stats</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/stepgen</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/steptest</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/streamer</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/sum2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/supply</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/thc</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/thcud</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/threads</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/threadtest</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/time</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/timedelay</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/timedelta</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/toggle</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/toggle2nist</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/tristate_bit</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/tristate_float</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/updown</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/watchdog</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/wcomp</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/wcompn</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/weighted_sum</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/xhc_hb04_util</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/man/man9/xor2</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/images/bipod.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/images/images/kinematics-math-01.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/images/images/kinematics-math-02.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/images/kinematics-math-03.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/images/kinematics-math-04.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/images/kinematics-math-05.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/images/kinematics-math-06.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/images/kinematics-math-07.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/kinematics</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/pid_theory</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/motion/tweaking_steppers</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/quickstart/images/step-calc-inch-math.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/quickstart/images/step-calc-mm-math.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/quickstart/stepper_quickstart</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/remap/structure</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/sandbox/000001</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/sandbox/index.html</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/setting-up/CAN-developing-setup</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/setting-up/developing-setting-up</loc>
+  <priority>1.0000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/setting-up/images/captured-can-packet.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/setting-up/images/wireshark-startup.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/docs/site/about-this-site/</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/favicon.ico</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/images/favicon.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/images/gear-256px-color.png</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/linkchecker.html</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/robots.txt</loc>
+  <priority>0.5000</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/stats?q=age</loc>
+  <lastmod>2016-08-10T01:00:00-12:00</lastmod>
+  <changefreq>yearly</changefreq>
+  <priority>0.3</priority>
+ </url>
+ <url>
+  <loc>http://www.machinekit.io/stats?q=name</loc>
+  <priority>0.5000</priority>
+ </url>
 </urlset>

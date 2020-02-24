@@ -7911,8 +7911,23 @@
         <article>
           <h1></h1>
           <div class="sect1">
-<h2 id="a-id-packages-developing-a-setting-up-for-development"><a id="packages-developing"></a>Setting up for development</h2>
+<h2 id="a-id-packages-developing-rip-a-setting-up-for-development"><a id="packages-developing-rip"></a>Setting up for development</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="a-id-packages-developing-docker-a-docker-deb-build"><a id="packages-developing-docker"></a>Docker .deb build</h3>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#install-development-packages-docker">Install packages required for building Debian packages with Docker</a></p>
+</li>
+<li>
+<p><a href="#get-source-and-build-docker">Get and build the Debian packages</a></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="a-id-packages-developing-rip-a-run-in-place-build"><a id="packages-developing-rip"></a>Run-In-Place build</h3>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -7925,17 +7940,124 @@
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="a-id-install-development-packages-docker-a-install-packages-required-for-building-debian-packages-with-docker"><a id="install-development-packages-docker"></a>Install packages required for building Debian packages with Docker</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These instructions assume that you have <code>sudo</code> rights and that you can execute <code>bash</code> scripts on your machine. You can build the <strong>Machinekit-HAL</strong> debian package this way which can be then installed on target machine by the <code>apt</code> utility.</p>
+</div>
+<div class="paragraph">
+<p>As a fist step make sure you can execute <strong>Docker CLI</strong> commands by installing <a href="https://docker.com">Docker</a>. The current steps needed for your platform are published in the official <a href="https://docs.docker.com/get-docker/">Docker documentation</a>. For vast majority of cases following the Debian Buster (current Debian stable version) <a href="https://docs.docker.com/get-docker/">here</a> will be the right one. Make sure you can run Docker commands without the need for <code>sudo</code> command!</p>
+</div>
+<div class="paragraph">
+<p>Test the installation by running few basic commands:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">machinekit@machinekit:~$ docker --version
+Docker version 0.0.0-20190727010531-15bdbd76a5, build 15bdbd76a5
+machinekit@machinekit:~$ docker run hello-world
+Unable to find image <span style="color: #BA2121">&#39;hello-world:latest&#39;</span> locally
+latest: Pulling from library/hello-world
+1b930d010525: Pull <span style="color: #008000">complete</span>
+Digest: sha256:fc6a51919cfeb2e6763f62b6d9e8815acbf7cd2e476ea353743570610737b752
+Status: Downloaded newer image <span style="color: #008000; font-weight: bold">for</span> hello-world:latest
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the <span style="color: #BA2121">&quot;hello-world&quot;</span> image from the Docker Hub.
+    <span style="color: #666666">(</span>amd64<span style="color: #666666">)</span>
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+machinekit@machinekit:~$</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you will need to have installed (and from terminal accessible) <code>git</code> CLI. The current steps needed for your platform are published in the official <a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Git documentation</a>. For Debian system and standard official repository this means running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">sudo apt install git</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After test that you can successfuly use git by running:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">machinekit@machinekit:~$ git --version
+git version 2.20.1
+machinekit@machinekit:~$</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is all you actually need for building Machinekit-HAL Debian packages in Docker containers.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="a-id-get-source-and-build-docker-a-get-and-build-the-debian-packages"><a id="get-source-and-build-docker"></a>Get and build the Debian packages</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Download (clone) the latest Machinekit-HAL repository locally and navigate to its folder.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">git clone https://github.com/machinekit/machinekit-hal.git
+<span style="color: #008000">cd</span> machinekit-hal</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From here run the <code>build_docker</code> script as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">scripts/build_docker -t amd64_10 -c deb -n</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where <code>amd64_10</code> stands for <em>architecture</em> _ <em>debian-version</em> for which you want to have the package build. For example, for example for <code>armhf</code> packages for <em>Debian Stretch</em> you would use <code>armhf_9</code>. More information can be glanced from the official Dovetail Automata GitHUB repository for <a href="https://github.com/dovetail-automata/mk-cross-builder/#using-the-images">mk-cross-builder</a>.</p>
+</div>
+<div class="paragraph">
+<p>This script uses the official pre-build Docker images from Dovetail Automata&#8217;s <a href="https://hub.docker.com/r/dovetailautomata/mk-cross-builder/tags">Docker HUB</a>. In case you want to use your own compiled packages (or some other pre-compiled packages from Docker HUB or other container repository), use environment variable when running aforementioned script:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash"><span style="color: #19177C">IMAGE</span><span style="color: #666666">=</span>eryaf/mk-cross-builder scripts/build_docker -t amd64_10 -c deb -n</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The build objects (with wanted <code>.deb</code> packages) will be created in directory where <code>machinekit-hal</code> resides.</p>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="a-id-install-development-packages-a-install-packages-required-for-building-from-source"><a id="install-development-packages"></a>Install packages required for building from source</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>These instructions assume you have a pristine Debian installation, and you
-have made sure you have <code>sudo</code> rights. Do not build Machinekit as root.</p>
+have made sure you have <code>sudo</code> rights. Do not build Machinekit-HAL or Machinekit-CNC as root.</p>
 </div>
 <div class="paragraph">
-<p>If you have previously installed the machinekit runtime packages, make sure
+<p>If you have previously installed the <code>machinekit*</code> runtime packages, make sure
 you have completely removed all of the runtime packages before you continue.
-To do so, execute <code>sudo apt-get remove --purge machinekit</code> .</p>
+To do so, execute <code>sudo apt-get remove --purge machinekit*</code> .</p>
 </div>
 <div class="paragraph">
 <p>Note that a previous LinuxCNC package install will conflict with building from source,
@@ -7949,20 +8071,9 @@ apt repository already or the wrong package versions will be installed - see the
 <div class="listingblock">
 <div class="content">
 <pre class="pygments highlight"><code data-lang="bash">sudo apt-get install libczmq-dev python-zmq libjansson-dev pkg-config <span style="color: #BB6622; font-weight: bold">\</span>
-  libwebsockets-dev libxenomai-dev python-pyftpdlib cython bwidget lsb-release</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>If you are on Debian Wheezy then you need to add wheezy-backports in the
-package archive for cython 0.19:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="pygments highlight"><code data-lang="bash">sudo sh -c <span style="color: #BB6622; font-weight: bold">\</span>
-  <span style="color: #BA2121">&quot;echo &#39;deb http://ftp.us.debian.org/debian wheezy-backports main&#39; &gt; \</span>
-<span style="color: #BA2121">  /etc/apt/sources.list.d/wheezy-backports.list&quot;</span>
-sudo apt-get update
-sudo apt-get install -t wheezy-backports cython</code></pre>
+  libwebsockets-dev python-pyftpdlib cython bwidget lsb-release git dpkg-dev
+
+sudo apt-get install --no-install-recommends devscripts equivs</code></pre>
 </div>
 </div>
 </div>
@@ -7970,12 +8081,16 @@ sudo apt-get install -t wheezy-backports cython</code></pre>
 <div class="sect1">
 <h2 id="a-id-get-source-and-build-a-get-and-build-the-source"><a id="get-source-and-build"></a>Get and build the source</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>For Machinekit-HAL run the following commands:</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash">sudo apt-get install git dpkg-dev
-sudo apt-get install --no-install-recommends devscripts equivs
-git clone https://github.com/machinekit/machinekit.git
-<span style="color: #008000">cd</span> machinekit
+<pre class="pygments highlight"><code data-lang="bash"><span style="color: #408080; font-style: italic"># only if you want to follow the step with adding to ~/.bashrc</span>
+<span style="color: #008000">cd</span> ~
+git clone https://github.com/machinekit/machinekit-hal.git
+<span style="color: #008000">cd</span> machinekit-hal
+<span style="color: #408080; font-style: italic"># to add non-RT POSIX support, add a &#39;p&#39;</span>
 <span style="color: #408080; font-style: italic"># to add RT-PREEMPT support, add a &#39;r&#39;</span>
 <span style="color: #408080; font-style: italic"># to add Xenomai support, add an &#39;x&#39;</span>
 <span style="color: #408080; font-style: italic"># this builds for Posix, RT-PREEMPT, Xenomai:</span>
@@ -7997,18 +8112,18 @@ sudo make setuid
 </div>
 <div class="paragraph">
 <p>If you wish to run this installation by default, add the next lines to your <code>~/.bashrc</code> file,
-so that every new terminal is set up correctly for running Machinekit.</p>
+so that every new terminal is set up correctly for running Machinekit-HAL.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash"><span style="color: #008000">echo</span> <span style="color: #BA2121">&#39;if [ -f ~/machinekit/scripts/rip-environment ]; then</span>
+<pre class="pygments highlight"><code data-lang="bash"><span style="color: #008000">echo</span> <span style="color: #BA2121">&#39;if [ -f ~/machinekit-hal/scripts/rip-environment ]; then</span>
 <span style="color: #BA2121">    source ~/machinekit/scripts/rip-environment</span>
-<span style="color: #BA2121">    echo &quot;Environment set up for running Machinekit&quot;</span>
+<span style="color: #BA2121">    echo &quot;Environment set up for running Machinekit-HAL&quot;</span>
 <span style="color: #BA2121">fi&#39;</span> &gt;&gt; ~/.bashrc</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>However, if you are installing a RIP build onto a system that already has a version of Machinekit installed as a binary
+<p>However, if you are installing a RIP build onto a system that already has a version of Machinekit* installed as a binary
 install from packages say, or has other RIP builds, you should invoke from the root dir of the RIP,</p>
 </div>
 <div class="listingblock">
@@ -8020,7 +8135,7 @@ install from packages say, or has other RIP builds, you should invoke from the r
 <p>only in terminal sessions where you specifically want to run this RIP.</p>
 </div>
 <div class="paragraph">
-<p>Users who wish to invoke machinekit (built with xenomai threads enabled) on a xenomai realtime kernel must ensure they are members of the xenomai group. If that wasn&#8217;t already done when installing the kernel, then add each such user now</p>
+<p>Users who wish to invoke machinekit-hal (built with xenomai threads enabled) on a xenomai realtime kernel must ensure they are members of the xenomai group. If that wasn&#8217;t already done when installing the kernel, then add each such user now</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -8028,7 +8143,28 @@ install from packages say, or has other RIP builds, you should invoke from the r
 </div>
 </div>
 <div class="paragraph">
-<p>Logout and login again therafter.</p>
+<p>Logout and login again therafter. (Machinekit-HAL supports only the <code>2.x</code> version of Xenomai. For most uses use the Preempt_RT patched kernel only.)</p>
+</div>
+<div class="paragraph">
+<p>To build both Machinekit-HAL and Machinekit-CNC in one step, use special script <code>build_with_cnc</code> in the <code>scripts</code> directory. Please, be advised that this script presumes existence of all needed packages on build machine and does not have provision for errors. To faciliate a issue-less build, try building the Machinekit-HAL package first.</p>
+</div>
+<div class="paragraph">
+<p>Also, the <code>build_with_cnc</code> script is better run in newly cloned repository of Machinekit-HAL, as it internally clones the Machinekit-CNC repository into the Machinekit-HAL repository.</p>
+</div>
+<div class="paragraph">
+<p>Run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight"><code data-lang="bash">git clone https://github.com/machinekit/machinekit-hal.git machinekit-hal-cnc-build
+<span style="color: #008000">cd</span> machinekit-hal-cnc-build
+scripts/build_with_cnc
+scripts/check-system-configuration.sh
+. ./scripts/rip-environment</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You will need to hack the <code>build_with_cnc</code> script for other uses. (Patches welcome!)</p>
 </div>
 <div class="sect2">
 <h3 id="a-note-on-machinekit-ini-and-the-mkuuid">A Note on machinekit.ini and the MKUUID</h3>
@@ -8142,8 +8278,8 @@ runtime prerequisites:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="pygments highlight"><code data-lang="bash">sudo apt-get install machinekit
-sudo apt-get remove --purge machinekit</code></pre>
+<pre class="pygments highlight"><code data-lang="bash">sudo apt-get install machinekit-hal machinekit-cnc
+sudo apt-get remove --purge machinekit*</code></pre>
 </div>
 </div>
 </div>

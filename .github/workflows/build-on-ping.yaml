@@ -1,0 +1,147 @@
+name: Rebuild on ping
+
+on:
+  repository_dispatch:
+    types: [rebuild-site-now]
+
+jobs:
+  testEligibility:
+    runs-on: ubuntu-latest
+    steps:
+      # Test if the request came from the machinekit/machinekit-docs repository,
+      # otherwise stop the build
+      - name: Test eligibility to tun
+        run: |
+          if [ "${{ secrets.DOCUMENTATION_PING_KEYCODE }}x" = "${{ github.event.client_payload.authorization }}x" ]; then
+            echo "Authorized to proceed."
+          else
+            echo "Authorization failed."
+            exit 1
+          fi
+
+  # This job is only temporary solution until a new Jekyll builder (Dockerfile) is
+  # created. Then the logic will be reworked.
+  buildMachinekitSite:
+    needs: testEligibility
+    runs-on: ubuntu-latest
+    env:
+      ACTING_SHA: ${{ github.event.client_payload.sha }}
+      POSITION_FROM_TOP: 2
+      OUTPUT_NAME: 'machinekit-site-${{ github.event.client_payload.sha }}'
+      ACTING_REPOSITORY: ${{ github.event.client_payload.originating_repository }}
+    steps:
+      # Locally clone the repository which we want to build with depth of 5 commits
+      - name: Checkout the pull request for Machinekit-docs
+        uses: actions/checkout@v2
+        with:
+          repository: '${{ env.ACTING_REPOSITORY }}'
+          ref: ${{ env.ACTING_SHA }}
+          path: to_build
+          fetch-depth: '5'
+
+      - name: Git SHA on which the build is requested
+        run: echo ${{ env.ACTING_SHA }}
+
+      - name: Git log of repository on which the build is requested
+        run: git log
+        working-directory: ./to_build
+
+      # Create directory for output files and export it's name as a environment variable
+      - name: Create output directory
+        run: |
+          mkdir ./${{ env.OUTPUT_NAME }}
+          echo ::set-env name=OUTPUT_DIRECTORY::$(pwd)/${{ env.OUTPUT_NAME }}
+          echo "The output directory is ${{ env.OUTPUT_DIRECTORY }}"
+          mkdir ./${{ env.OUTPUT_NAME }}/build      
+
+      # The commits pushed to gh-pages branch will appear as originated from the author
+      # of the changes
+      - name: Create JSON with commit metadata
+        env: 
+          FILENAME: '$OUTPUT_DIRECTORY/build-metadata.json'
+        run: |
+          echo "###########################################################"
+          echo "# Commit which will be used for mining of the credentials #"
+          echo "###########################################################"
+          git log -n 1 ${{ env.ACTING_SHA }}~$((${{ env.POSITION_FROM_TOP }}-1))
+          jq -n --arg authoremail "$(git log --format='%ae' -n 1 ${{ env.ACTING_SHA }}~$((${{ env.POSITION_FROM_TOP }}-1)))" --arg authorname "$(git log --format='%an' -n 1 ${{ env.ACTING_SHA }}~$((${{ env.POSITION_FROM_TOP }}-1)))" --arg commitmsg "$(git log --format='%B' -n 1 ${{ env.ACTING_SHA }}~$((${{ env.POSITION_FROM_TOP }}-1)))" --arg sha "${{ env.ACTING_SHA }}" '{"author":"\($authorname)","email":"\($authoremail)","message":"\($commitmsg)","sha":"\($sha)"}' > ${{ env.FILENAME }}
+          echo "###########################################################"
+          echo "# JSON file with metadata information of pertinent commit #"
+          echo "###########################################################"          
+          echo "Whole path: ${{ env.FILENAME }}"
+          echo ""
+          cat ${{ env.FILENAME }}
+        working-directory: ./to_build
+
+      # Running the commands in ubuntu-master and not in Docker container because
+      # of the age of the container -> It cannot be even build anymore
+      - name: Run the Jekyll builder
+        run: docker run -v $(pwd)/to_build:/work haberlerm/docker-jekyll-asciidoctor jekyll build --verbose --trace --config _config.yml,_config_devel.yml
+
+      - name: Print newly created files
+        run: find . -print0 | xargs -0 -I '{}' ls --color -d '{}'
+        working-directory: ./to_build
+
+      - name: Copy the newly generated site to output directory
+        run: cp -r to_build/_site/* ${{ env.OUTPUT_DIRECTORY }}/build
+      
+      - name: Upload the artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: ${{ env.OUTPUT_NAME}}
+          path: ${{ env.OUTPUT_DIRECTORY}}
+
+  publishMachinekitSite:
+    needs: buildMachinekitSite
+    runs-on: ubuntu-latest
+    env:
+      ARTIFACT_NAME: 'machinekit-site-${{ github.event.client_payload.sha }}'
+    steps:
+      - uses: actions/download-artifact@v1
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: artifact
+
+      - name: Parse the metadata for commit from JSON file 
+        run: |
+          echo "Received JSON file $(pwd)/build-metadata.json"
+          cat build-metadata.json 
+          echo ::set-env name=COMMIT_AUTHOR_NAME::$(cat build-metadata.json | jq -r .author)
+          echo ::set-env name=COMMIT_AUTHOR_EMAIL::$(cat build-metadata.json | jq -r .email)
+          echo ::set-env name=COMMIT_MESSAGE::$(cat build-metadata.json | jq -r .message)
+          echo ::set-env name=COMMIT_SHA::$(cat build-metadata.json | jq -r .sha)
+        working-directory: ./artifact
+
+      - name: Print information parsed out from JSON file
+        run: |
+          echo "Author name for the new commit: ${{ env.COMMIT_AUTHOR_NAME }}"
+          echo "Author e-mail for the new commit: ${{ env.COMMIT_AUTHOR_EMAIL }}"
+          echo "Originating message for the new commit: ${{ env.COMMIT_MESSAGE }}"
+          echo "SHA of the originating commit: ${{ env.COMMIT_SHA }}"
+      
+      # Locally clone the repository to which the build results will be pushed
+      - name: Checkout this repository
+        uses: actions/checkout@v2
+        with:
+          ref: master
+          path: target
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Always delete old files in the repository (for example for the case when commits
+      # remove some files), but keep the .git and .github directories and files in these intact
+      # In other words, don't kill itself
+      - name: Delete all files from ./target
+        run: find . -depth -not \( -path "./.git" -or -path "./.github" -or -path "./.gitignore" -or -path "./CNAME" -or -path "." -or -path "./.git/*" -or -path "./.github/*" -or -path "./docs" -or -path "./docs/man" -or -path "./docs/man/*" \) -print0 | xargs -0 -t -I '{}' rm  -d '{}'
+        working-directory: ./target
+
+      - name: Copy all files from ./artifact to ./target
+        run: cp -r -v ./artifact/build/* ./target
+
+      - name: Deploy to Machinekit Github Pages
+        run: |
+          git config --local user.name "${{ env.COMMIT_AUTHOR_NAME }}"
+          git config --local user.email "${{ env.COMMIT_AUTHOR_EMAIL }}"
+          git add --all
+          git commit -m "Automated deployement of ${{ env.COMMIT_SHA }}: ${{ env.COMMIT_MESSAGE }}"
+          git push
+        working-directory: ./target

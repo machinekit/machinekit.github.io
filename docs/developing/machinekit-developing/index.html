@@ -8090,17 +8090,12 @@ sudo apt-get install --no-install-recommends devscripts equivs</code></pre>
 <span style="color: #008000">cd</span> ~
 git clone https://github.com/machinekit/machinekit-hal.git
 <span style="color: #008000">cd</span> machinekit-hal
-<span style="color: #408080; font-style: italic"># to add non-RT POSIX support, add a &#39;p&#39;</span>
-<span style="color: #408080; font-style: italic"># to add RT-PREEMPT support, add a &#39;r&#39;</span>
-<span style="color: #408080; font-style: italic"># to add Xenomai support, add an &#39;x&#39;</span>
-<span style="color: #408080; font-style: italic"># this builds for Posix, RT-PREEMPT, Xenomai:</span>
-debian/configure -prx
+debian/configure
 sudo mk-build-deps -ir
 <span style="color: #008000">cd</span> src
 ./autogen.sh
 <span style="color: #408080; font-style: italic"># for the Beaglebone, add --with-platform-beaglebone to ./configure</span>
 <span style="color: #408080; font-style: italic"># for the Raspberry2, add --with-platform-raspberry to ./configure</span>
-<span style="color: #408080; font-style: italic"># for PC platforms, add --with-rt-preempt  --with-posix  --with-xenomai</span>
 ./configure
 make
 sudo make setuid
@@ -8135,7 +8130,7 @@ install from packages say, or has other RIP builds, you should invoke from the r
 <p>only in terminal sessions where you specifically want to run this RIP.</p>
 </div>
 <div class="paragraph">
-<p>Users who wish to invoke machinekit-hal (built with xenomai threads enabled) on a xenomai realtime kernel must ensure they are members of the xenomai group. If that wasn&#8217;t already done when installing the kernel, then add each such user now</p>
+<p>Users who wish to invoke machinekit-hal (built with Xenomai 2 threads enabled) on a Xenomai 2 realtime kernel must ensure they are members of the xenomai group. If that wasn&#8217;t already done when installing the kernel, then add each such user now</p>
 </div>
 <div class="listingblock">
 <div class="content">

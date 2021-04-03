@@ -5,24 +5,9 @@ on:
     types: [rebuild-site-now]
 
 jobs:
-  testEligibility:
-    runs-on: ubuntu-latest
-    steps:
-      # Test if the request came from the machinekit/machinekit-docs repository,
-      # otherwise stop the build
-      - name: Test eligibility to tun
-        run: |
-          if [ "${{ secrets.DOCUMENTATION_PING_KEYCODE }}x" = "${{ github.event.client_payload.authorization }}x" ]; then
-            echo "Authorized to proceed."
-          else
-            echo "Authorization failed."
-            exit 1
-          fi
-
   # This job is only temporary solution until a new Jekyll builder (Dockerfile) is
   # created. Then the logic will be reworked.
   buildMachinekitSite:
-    needs: testEligibility
     runs-on: ubuntu-latest
     env:
       ACTING_SHA: ${{ github.event.client_payload.sha }}
@@ -49,7 +34,7 @@ jobs:
       - name: Create output directory
         run: |
           mkdir ./${{ env.OUTPUT_NAME }}
-          echo ::set-env name=OUTPUT_DIRECTORY::$(pwd)/${{ env.OUTPUT_NAME }}
+          echo "OUTPUT_DIRECTORY=$(pwd)/${{ env.OUTPUT_NAME }}" >> "$GITHUB_ENV"
           echo "The output directory is ${{ env.OUTPUT_DIRECTORY }}"
           mkdir ./${{ env.OUTPUT_NAME }}/build      
 
@@ -104,11 +89,20 @@ jobs:
       - name: Parse the metadata for commit from JSON file 
         run: |
           echo "Received JSON file $(pwd)/build-metadata.json"
-          cat build-metadata.json 
-          echo ::set-env name=COMMIT_AUTHOR_NAME::$(cat build-metadata.json | jq -r .author)
-          echo ::set-env name=COMMIT_AUTHOR_EMAIL::$(cat build-metadata.json | jq -r .email)
-          echo ::set-env name=COMMIT_MESSAGE::$(cat build-metadata.json | jq -r .message)
-          echo ::set-env name=COMMIT_SHA::$(cat build-metadata.json | jq -r .sha)
+          cat build-metadata.json
+          printf "%b" \
+            "COMMIT_AUTHOR_NAME<<EOF\n" \
+            "$(cat build-metadata.json | jq -r .author)\n" \
+            "EOF\n" \
+            "COMMIT_AUTHOR_EMAIL<<EOF\n" \
+            "$(cat build-metadata.json | jq -r .email)\n" \
+            "EOF\n" \
+            "COMMIT_MESSAGE<<EOF\n" \
+            "$(cat build-metadata.json | jq -r .message)\n" \
+            "EOF\n" \
+            "COMMIT_SHA<<EOF\n" \
+            "$(cat build-metadata.json | jq -r .sha)\n" \
+            "EOF\n" >> "$GITHUB_ENV"
         working-directory: ./artifact
 
       - name: Print information parsed out from JSON file

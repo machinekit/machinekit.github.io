@@ -8036,7 +8036,7 @@ cp ../*.deb .
 <p>At the end you will have several new <strong>.deb</strong> files in your folder.</p>
 </div>
 <div class="paragraph">
-<p>You should replace <code>--gid 1000`s and `--uid 1000</code> with numbers which you got from <code>id</code> command in previous step.</p>
+<p>You should replace <code>--gid 1000</code> and <code>--uid 1000</code> with numbers which you got from <code>id</code> command in previous step.</p>
 </div>
 <div class="paragraph">
 <p>As EMCApplication packages are pinning the version of Machinekit-HAL packages dependency to one specific version, we need to pass this version string to <em>debian/configure</em> script as <code>debian/configure machinekit-hal=${VERSION}</code>. One can use either version available from one of accessible Debian repositories, or already installed version.</p>
@@ -8155,7 +8155,7 @@ linuxcnc</code></pre>
 <p>This way the <em>apt</em> will make sure that the correct version of Machinekit-HAL is installed for the EMCApplication issue-less operation.</p>
 </div>
 <div class="paragraph">
-<p>Using the <em><strong>mk-build-deps</strong></em> script from the <em>devscripts</em> package for creating environment capable of problem-less building of packages by invocating <code>dpkg-buildpackage</code> or compiling and linking the software during <strong>R</strong>un-<strong>I</strong>n-<strong>P</strong>lace build needs the <code>debian/control</code> file with correctly stated <code>Build-Depends: machinekit-ha (=</code> dependency. This is why we need to pass the <em>machinekit-hal</em> package version early in stage when calling the <code>debian/configure machinekit-hal=${VERSION}</code> script.</p>
+<p>Using the <em><strong>mk-build-deps</strong></em> script from the <em>devscripts</em> package for creating environment capable of problem-less building of packages by invocating <code>dpkg-buildpackage</code> or compiling and linking the software during <strong>R</strong>un-<strong>I</strong>n-<strong>P</strong>lace build needs the <code>debian/control</code> file with correctly stated <code>Build-Depends: machinekit-hal (=</code> dependency. This is why we need to pass the <em>machinekit-hal</em> package version early in stage when calling the <code>debian/configure machinekit-hal=${VERSION}</code> script.</p>
 </div>
 </div>
 </div>
